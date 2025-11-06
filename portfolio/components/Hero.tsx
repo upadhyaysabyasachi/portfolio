@@ -80,7 +80,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
 
       <div className="container mx-auto px-6 relative z-10 pt-8">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 px-2 lg:px-4">
             {/* Image Section - Left */}
             {imageSrc && (
               <motion.div
@@ -107,15 +107,15 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
             )}
 
             {/* Content Section - Right */}
-            <div className={`w-full ${imageSrc ? 'lg:w-1/2' : 'max-w-4xl mx-auto'} text-center lg:text-left pb-8`}>
+            <div className={`w-full ${imageSrc ? 'lg:w-1/2' : 'max-w-4xl mx-auto'} text-center lg:text-left pb-8 overflow-hidden`}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <h1 className="text-5xl md:text-7xl font-bold font-display mb-6">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-display mb-6 break-words">
                   Hi, I'm{' '}
-                  <span className="text-gradient whitespace-nowrap">
+                  <span className="text-gradient">
                     Sabyasachi Upadhyay
                   </span>
                 </h1>
