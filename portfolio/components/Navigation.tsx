@@ -36,27 +36,27 @@ const Navigation = () => {
           : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <a href="#" className="text-2xl font-bold font-display">
+          <a href="#" className="text-xl sm:text-2xl font-bold font-display">
             <span className="text-gradient">SU</span>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-4 lg:gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-700 hover:text-primary-600 transition-colors font-medium"
+                className="text-sm lg:text-base text-gray-700 hover:text-primary-600 transition-colors font-medium"
               >
                 {link.name}
               </a>
             ))}
             <a
               href="#contact"
-              className="px-6 py-2 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+              className="px-4 lg:px-6 py-2 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 text-sm lg:text-base"
             >
               Hire Me
             </a>

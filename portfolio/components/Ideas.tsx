@@ -78,8 +78,8 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
   // </h2>
 
   return (
-    <section id="ideas" className="py-24 bg-gradient-to-br from-gray-50 to-purple-50" ref={ref}>
-      <div className="container mx-auto px-6">
+    <section id="ideas" className="py-16 sm:py-24 bg-gradient-to-br from-gray-50 to-purple-50" ref={ref}>
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -87,11 +87,11 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
           className="text-center mb-16"
         >
           {/* Heading is here */}
-          <h2 className="text-4xl md:text-5xl font-bold font-display mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display mb-4">
             Research and  <span className="text-gradient">Publications</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
             Thoughts on product, technology, policy, and creating meaningful impact
           </p>
         </motion.div>
@@ -103,7 +103,7 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-2xl p-8 shadow-lg card-hover border border-gray-100 group"
+              className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg card-hover border border-gray-100 group"
             >
               <div className="flex flex-col md:flex-row md:items-start gap-6">
                 <div className="flex-1">
@@ -135,7 +135,7 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
                         />
                       </div>
                     )}
-                    <h3 className="text-2xl font-bold group-hover:text-primary-600 transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-bold group-hover:text-primary-600 transition-colors">
                       {blog.title}
                     </h3>
                   </div>

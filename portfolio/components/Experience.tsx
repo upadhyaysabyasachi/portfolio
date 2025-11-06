@@ -94,19 +94,19 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className="py-24 bg-gradient-to-br from-gray-50 to-blue-50" ref={ref}>
-      <div className="container mx-auto px-6">
+    <section id="experience" className="py-16 sm:py-24 bg-gradient-to-br from-gray-50 to-blue-50" ref={ref}>
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-display mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display mb-4">
             Experience & <span className="text-gradient">Journey</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
             From building ML systems to shaping national platforms, my journey has been about creating impact at scale
           </p>
         </motion.div>
@@ -118,20 +118,20 @@ const Experience = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-2xl p-8 shadow-lg card-hover border border-gray-100"
+              className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg card-hover border border-gray-100"
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
                     <Briefcase className="w-5 h-5 text-primary-600" />
-                    <h3 className="text-2xl font-bold text-gray-900">{exp.role}</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900">{exp.role}</h3>
                     {exp.current && (
                       <span className="px-3 py-1 text-xs font-semibold bg-gradient-primary text-white rounded-full">
                         Current
                       </span>
                     )}
                   </div>
-                  <p className="text-xl text-primary-600 font-semibold mb-2">{exp.company}</p>
+                  <p className="text-lg sm:text-xl text-primary-600 font-semibold mb-2">{exp.company}</p>
                   <p className="text-gray-600 italic mb-3">{exp.description}</p>
                   <div className="flex flex-wrap gap-4 text-sm text-gray-500">
                     <div className="flex items-center gap-1">

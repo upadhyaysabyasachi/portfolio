@@ -41,7 +41,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-20 left-10 w-72 h-72 bg-primary-300 rounded-full mix-blend-multiply filter blur-xl opacity-20"
+          className="absolute top-20 left-4 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-primary-300 rounded-full mix-blend-multiply filter blur-xl opacity-20"
           animate={{
             x: [0, 100, 0],
             y: [0, 50, 0],
@@ -53,7 +53,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
           }}
         />
         <motion.div
-          className="absolute top-40 right-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20"
+          className="absolute top-40 right-4 sm:right-10 w-48 h-48 sm:w-72 sm:h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20"
           animate={{
             x: [0, -100, 0],
             y: [0, 100, 0],
@@ -65,7 +65,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
           }}
         />
         <motion.div
-          className="absolute -bottom-8 left-1/2 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20"
+          className="absolute -bottom-8 left-1/2 w-48 h-48 sm:w-72 sm:h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20"
           animate={{
             x: [0, 50, 0],
             y: [0, -50, 0],
@@ -78,9 +78,9 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10 pt-8">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 pt-8">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 px-2 lg:px-4">
+          <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
             {/* Image Section - Left */}
             {imageSrc && (
               <motion.div
@@ -89,7 +89,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                 transition={{ duration: 0.6 }}
                 className="w-full lg:w-1/2 flex justify-center lg:justify-start"
               >
-                <div className="relative w-full max-w-md lg:max-w-lg">
+                <div className="relative w-full max-w-xs sm:max-w-md lg:max-w-lg">
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                     <Image
                       src={getAssetPath(imageSrc)}
@@ -127,7 +127,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="mb-8"
               >
-                <div className="text-3xl md:text-4xl font-semibold text-gray-700 h-16 flex items-center justify-center lg:justify-start">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-700 h-12 sm:h-16 flex items-center justify-center lg:justify-start">
                   <motion.span
                     key={currentHeadline}
                     initial={{ opacity: 0, y: 20 }}
@@ -145,7 +145,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto lg:mx-0 leading-relaxed"
+                className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-8 sm:mb-12 max-w-3xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0"
               >
                 {bio ||
                   "Building innovative products that drive growth and create meaningful impact. Passionate about leveraging AI and technology to solve real-world problems and empower communities."}
@@ -155,17 +155,17 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center"
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start items-center px-2 sm:px-0"
               >
                 <a
                   href="#contact"
-                  className="px-8 py-4 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
+                  className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 text-center text-sm sm:text-base"
                 >
                   Get in Touch
                 </a>
                 <a
                   href="#projects"
-                  className="px-8 py-4 border-2 border-primary-600 text-primary-600 rounded-full font-semibold hover:bg-primary-50 hover:scale-105 transition-all duration-300"
+                  className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-primary-600 text-primary-600 rounded-full font-semibold hover:bg-primary-50 hover:scale-105 transition-all duration-300 text-center text-sm sm:text-base"
                 >
                   View My Work
                 </a>
@@ -176,58 +176,58 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
-                className="mt-16 mb-16 lg:mb-20"
+                className="mt-12 sm:mt-16 mb-12 sm:mb-16 lg:mb-20"
               >
-                <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+                <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
                   <a
                     href="https://github.com/upadhyaysabyasachi"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-8 py-4 bg-white rounded-2xl font-semibold text-gray-800 text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-gray-50"
+                    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-white rounded-xl sm:rounded-2xl font-semibold text-gray-800 text-sm sm:text-base md:text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-gray-50"
                     aria-label="GitHub"
                   >
-                    <FaGithub className="text-3xl" />
-                    <span>GitHub</span>
+                    <FaGithub className="text-xl sm:text-2xl md:text-3xl" />
+                    <span className="hidden sm:inline">GitHub</span>
                   </a>
                   <a
                     href="https://huggingface.co/sachihugsai"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-8 py-4 bg-white rounded-2xl font-semibold text-gray-800 text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-yellow-50"
+                    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-white rounded-xl sm:rounded-2xl font-semibold text-gray-800 text-sm sm:text-base md:text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-yellow-50"
                     aria-label="HuggingFace"
                   >
-                    <span className="text-3xl">🤗</span>
-                    <span>HuggingFace</span>
+                    <span className="text-xl sm:text-2xl md:text-3xl">🤗</span>
+                    <span className="hidden sm:inline">HuggingFace</span>
                   </a>
                   <a
                     href="https://www.linkedin.com/in/sabyasachi-upadhyay-293b0134/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-8 py-4 bg-white rounded-2xl font-semibold text-gray-800 text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-blue-50"
+                    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-white rounded-xl sm:rounded-2xl font-semibold text-gray-800 text-sm sm:text-base md:text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-blue-50"
                     aria-label="LinkedIn"
                   >
-                    <FaLinkedin className="text-3xl text-blue-600" />
-                    <span>LinkedIn</span>
+                    <FaLinkedin className="text-xl sm:text-2xl md:text-3xl text-blue-600" />
+                    <span className="hidden sm:inline">LinkedIn</span>
                   </a>
                   <a
                     href="https://topmate.io/sabyasachi_upadhyay/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-8 py-4 bg-white rounded-2xl font-semibold text-gray-800 text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-red-50"
+                    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-white rounded-xl sm:rounded-2xl font-semibold text-gray-800 text-sm sm:text-base md:text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-red-50"
                     aria-label="Topmate"
                   >
-                    <span className="text-3xl">📅</span>
-                    <span>Topmate</span>
+                    <span className="text-xl sm:text-2xl md:text-3xl">📅</span>
+                    <span className="hidden sm:inline">Topmate</span>
                   </a>
                   <a
                     href="https://substack.com/@sabyasachiupadhyay"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-8 py-4 bg-white rounded-2xl font-semibold text-gray-800 text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-orange-50"
+                    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-white rounded-xl sm:rounded-2xl font-semibold text-gray-800 text-sm sm:text-base md:text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-orange-50"
                     aria-label="Substack"
                   >
-                    <SiSubstack className="text-3xl text-orange-600" />
-                    <span>Substack</span>
+                    <SiSubstack className="text-xl sm:text-2xl md:text-3xl text-orange-600" />
+                    <span className="hidden sm:inline">Substack</span>
                   </a>
                 </div>
               </motion.div>

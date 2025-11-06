@@ -80,8 +80,8 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
   const displayProjects = projects.length > 0 ? projects : defaultProjects
 
   return (
-    <section id="projects" className="pt-12 pb-24 bg-white" ref={ref}>
-      <div className="container mx-auto px-6">
+    <section id="projects" className="pt-12 pb-16 sm:pb-24 bg-white" ref={ref}>
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Personal Projects Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -89,16 +89,16 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-display mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display mb-4">
             Personal <span className="text-gradient">Projects</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
             Side projects exploring new technologies and creative solutions
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-24">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto mb-16 sm:mb-24">
           {personalProjects.map((project, index) => (
             <motion.div
               key={project._id}
@@ -126,16 +126,16 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                 </div>
               )}
 
-              <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-                <p className="text-gray-600 mb-4 flex-1">{project.description}</p>
+              <div className="p-4 sm:p-6 flex-1 flex flex-col">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3">{project.title}</h3>
+                <p className="text-sm sm:text-base text-gray-600 mb-4 flex-1">{project.description}</p>
 
                 {project.techStack && project.techStack.length > 0 && (
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.techStack.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 text-sm bg-white text-primary-700 rounded-full border border-primary-200"
+                        className="px-3 py-1 text-xs sm:text-sm bg-white text-primary-700 rounded-full border border-primary-200"
                       >
                         {tech}
                       </span>
@@ -149,7 +149,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors"
+                      className="flex items-center gap-2 text-sm sm:text-base text-primary-600 hover:text-primary-700 font-semibold transition-colors"
                     >
                       <ExternalLink className="w-4 h-4" />
                       View Project
@@ -160,7 +160,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-600 hover:text-gray-700 font-semibold transition-colors"
+                      className="flex items-center gap-2 text-sm sm:text-base text-gray-600 hover:text-gray-700 font-semibold transition-colors"
                     >
                       <Github className="w-4 h-4" />
                       GitHub
@@ -179,8 +179,8 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="max-w-4xl mx-auto mb-16"
         >
-          <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 border-2 border-primary-200 shadow-xl">
-            <div className="flex flex-col md:flex-row items-center gap-8">
+          <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-6 sm:p-8 border-2 border-primary-200 shadow-xl">
+            <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8">
               <div className="flex-shrink-0">
                 <Image
                   src={getAssetPath('/images/NextLeap-logo.jpg')}
@@ -191,10 +191,10 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                 />
               </div>
               <div className="flex-1 text-center md:text-left">
-                <h3 className="text-2xl font-bold mb-3">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3">
                   🏆 Top Fellow - NextLeap Product Manager Fellowship
                 </h3>
-                <p className="text-gray-700 mb-4 leading-relaxed">
+                <p className="text-base sm:text-lg text-gray-700 mb-4 leading-relaxed">
                   Recognized as the Top Fellow in the NextLeap Product Manager Fellowship program. 
                   Capstone project: <strong>Prime Bee</strong> - An AI-powered digital assistant for Amazon Prime Video 
                   to solve the "Paradox of Choice" problem, featuring natural language search and personalized content discovery.
@@ -220,16 +220,16 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-display mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display mb-4">
             Projects at <span className="text-gradient">Work</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
             Building products that create impact at scale across healthcare, entrepreneurship, and technology
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {displayProjects.map((project, index) => (
             <motion.div
               key={project._id}
@@ -267,16 +267,16 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                 </div>
               )}
 
-              <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-                <p className="text-gray-600 mb-4 flex-1">{project.description}</p>
+              <div className="p-4 sm:p-6 flex-1 flex flex-col">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3">{project.title}</h3>
+                <p className="text-sm sm:text-base text-gray-600 mb-4 flex-1">{project.description}</p>
 
                 {project.techStack && project.techStack.length > 0 && (
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.techStack.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 text-sm bg-white text-primary-700 rounded-full border border-primary-200"
+                        className="px-3 py-1 text-xs sm:text-sm bg-white text-primary-700 rounded-full border border-primary-200"
                       >
                         {tech}
                       </span>
@@ -290,7 +290,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors"
+                      className="flex items-center gap-2 text-sm sm:text-base text-primary-600 hover:text-primary-700 font-semibold transition-colors"
                     >
                       <ExternalLink className="w-4 h-4" />
                       View Project
@@ -301,7 +301,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-600 hover:text-gray-700 font-semibold transition-colors"
+                      className="flex items-center gap-2 text-sm sm:text-base text-gray-600 hover:text-gray-700 font-semibold transition-colors"
                     >
                       <Github className="w-4 h-4" />
                       Code

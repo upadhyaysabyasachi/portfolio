@@ -58,8 +58,8 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-24 bg-white" ref={ref}>
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-16 sm:py-24 bg-white" ref={ref}>
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Video Showcase Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -67,18 +67,18 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-display mb-12 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display mb-8 sm:mb-12 text-center">
             Beyond <span className="text-gradient">Work</span>
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {/* Stand-up Comedy Video */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-6 border border-gray-100 shadow-lg"
+              className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-4 sm:p-6 border border-gray-100 shadow-lg"
             >
-              <h3 className="text-2xl font-bold mb-4">🎭 Stand-up Comedy</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">🎭 Stand-up Comedy</h3>
               <p className="text-gray-600 mb-4">Watch me perform at an open mic night!</p>
               <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
                 <iframe
@@ -99,9 +99,9 @@ const Contact = () => {
               initial={{ opacity: 0, x: 30 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="bg-gradient-to-br from-gray-50 to-red-50 rounded-2xl p-6 border border-gray-100 shadow-lg"
+              className="bg-gradient-to-br from-gray-50 to-red-50 rounded-2xl p-4 sm:p-6 border border-gray-100 shadow-lg"
             >
-              <h3 className="text-2xl font-bold mb-4">📚 Sambodh IAS</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">📚 Sambodh IAS</h3>
               <p className="text-gray-600 mb-4">Check out my YouTube channel for educational content!</p>
               <a
                 href="https://www.youtube.com/@SambodhIAS"
@@ -142,16 +142,16 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-display mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display mb-4">
             Let's <span className="text-gradient">Connect</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-700 max-w-4xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-4xl mx-auto px-4 sm:px-0">
             Have a project idea? Want to collaborate? Want to hire me? Or just want to say hi?
           </p>
         </motion.div>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -160,7 +160,7 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Get in Touch</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
@@ -205,7 +205,7 @@ const Contact = () => {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold mb-6">Connect on Social</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Connect on Social</h3>
               <div className="flex gap-4">
                 {socialLinks.map((social) => (
                   <a
