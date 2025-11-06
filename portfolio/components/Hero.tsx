@@ -5,13 +5,17 @@ import { motion } from 'framer-motion'
 import { ArrowDown } from 'lucide-react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { SiSubstack } from 'react-icons/si'
+import Image from 'next/image'
+import { getAssetPath } from '@/lib/utils'
 
 interface HeroProps {
   rotatingHeadlines?: string[]
   bio?: string
+  imageSrc?: string
+  imageAlt?: string
 }
 
-const Hero = ({ rotatingHeadlines, bio }: HeroProps) => {
+const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: HeroProps) => {
   const [currentHeadline, setCurrentHeadline] = useState(0)
   
   const headlines = rotatingHeadlines || [
@@ -33,7 +37,7 @@ const Hero = ({ rotatingHeadlines, bio }: HeroProps) => {
   }
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 pt-20">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -74,131 +78,161 @@ const Hero = ({ rotatingHeadlines, bio }: HeroProps) => {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold font-display mb-6">
-              Hi, I'm{' '}
-              <span className="text-gradient whitespace-nowrap">
-                Sabyasachi Upadhyay
-              </span>
-            </h1>
-          </motion.div>
+      <div className="container mx-auto px-6 relative z-10 pt-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            {/* Image Section - Left */}
+            {imageSrc && (
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="w-full lg:w-1/2 flex justify-center lg:justify-start"
+              >
+                <div className="relative w-full max-w-md lg:max-w-lg">
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                    <Image
+                      src={getAssetPath(imageSrc)}
+                      alt={imageAlt}
+                      width={600}
+                      height={800}
+                      className="w-full h-auto object-cover"
+                      priority
+                    />
+                  </div>
+                  {/* Decorative gradient overlay */}
+                  <div className="absolute -inset-4 bg-gradient-to-r from-primary-200 to-purple-200 rounded-2xl opacity-20 blur-2xl -z-10" />
+                </div>
+              </motion.div>
+            )}
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mb-8"
-          >
-            <div className="text-3xl md:text-4xl font-semibold text-gray-700 h-16 flex items-center justify-center">
-              <motion.span
-                key={currentHeadline}
+            {/* Content Section - Right */}
+            <div className={`w-full ${imageSrc ? 'lg:w-1/2' : 'max-w-4xl mx-auto'} text-center lg:text-left pb-8`}>
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
-                className="bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent"
               >
-                {headlines[currentHeadline]}
-              </motion.span>
+                <h1 className="text-5xl md:text-7xl font-bold font-display mb-6">
+                  Hi, I'm{' '}
+                  <span className="text-gradient whitespace-nowrap">
+                    Sabyasachi Upadhyay
+                  </span>
+                </h1>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="mb-8"
+              >
+                <div className="text-3xl md:text-4xl font-semibold text-gray-700 h-16 flex items-center justify-center lg:justify-start">
+                  <motion.span
+                    key={currentHeadline}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5 }}
+                    className="bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent"
+                  >
+                    {headlines[currentHeadline]}
+                  </motion.span>
+                </div>
+              </motion.div>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto lg:mx-0 leading-relaxed"
+              >
+                {bio ||
+                  "Building innovative products that drive growth and create meaningful impact. Passionate about leveraging AI and technology to solve real-world problems and empower communities."}
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center"
+              >
+                <a
+                  href="#contact"
+                  className="px-8 py-4 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
+                >
+                  Get in Touch
+                </a>
+                <a
+                  href="#projects"
+                  className="px-8 py-4 border-2 border-primary-600 text-primary-600 rounded-full font-semibold hover:bg-primary-50 hover:scale-105 transition-all duration-300"
+                >
+                  View My Work
+                </a>
+              </motion.div>
+
+              {/* Social Media Links */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+                className="mt-16 mb-16 lg:mb-20"
+              >
+                <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+                  <a
+                    href="https://github.com/upadhyaysabyasachi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-8 py-4 bg-white rounded-2xl font-semibold text-gray-800 text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-gray-50"
+                    aria-label="GitHub"
+                  >
+                    <FaGithub className="text-3xl" />
+                    <span>GitHub</span>
+                  </a>
+                  <a
+                    href="https://huggingface.co/sachihugsai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-8 py-4 bg-white rounded-2xl font-semibold text-gray-800 text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-yellow-50"
+                    aria-label="HuggingFace"
+                  >
+                    <span className="text-3xl">🤗</span>
+                    <span>HuggingFace</span>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/sabyasachi-upadhyay-293b0134/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-8 py-4 bg-white rounded-2xl font-semibold text-gray-800 text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-blue-50"
+                    aria-label="LinkedIn"
+                  >
+                    <FaLinkedin className="text-3xl text-blue-600" />
+                    <span>LinkedIn</span>
+                  </a>
+                  <a
+                    href="https://topmate.io/sabyasachi_upadhyay/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-8 py-4 bg-white rounded-2xl font-semibold text-gray-800 text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-red-50"
+                    aria-label="Topmate"
+                  >
+                    <span className="text-3xl">📅</span>
+                    <span>Topmate</span>
+                  </a>
+                  <a
+                    href="https://substack.com/@sabyasachiupadhyay"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-8 py-4 bg-white rounded-2xl font-semibold text-gray-800 text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-orange-50"
+                    aria-label="Substack"
+                  >
+                    <SiSubstack className="text-3xl text-orange-600" />
+                    <span>Substack</span>
+                  </a>
+                </div>
+              </motion.div>
             </div>
-          </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed"
-          >
-            {bio ||
-              "Building innovative products that drive growth and create meaningful impact. Passionate about leveraging AI and technology to solve real-world problems and empower communities."}
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <a
-              href="#contact"
-              className="px-8 py-4 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
-            >
-              Get in Touch
-            </a>
-            <a
-              href="#projects"
-              className="px-8 py-4 border-2 border-primary-600 text-primary-600 rounded-full font-semibold hover:bg-primary-50 hover:scale-105 transition-all duration-300"
-            >
-              View My Work
-            </a>
-          </motion.div>
-
-          {/* Social Media Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
-            className="mt-16"
-          >
-            <div className="flex justify-center gap-4">
-              <a
-                href="https://github.com/upadhyaysabyasachi"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 px-8 py-4 bg-white rounded-2xl font-semibold text-gray-800 text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-gray-50"
-                aria-label="GitHub"
-              >
-                <FaGithub className="text-3xl" />
-                <span>GitHub</span>
-              </a>
-              <a
-                href="https://huggingface.co/sachihugsai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 px-8 py-4 bg-white rounded-2xl font-semibold text-gray-800 text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-yellow-50"
-                aria-label="HuggingFace"
-              >
-                <span className="text-3xl">🤗</span>
-                <span>HuggingFace</span>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/sabyasachi-upadhyay-293b0134/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 px-8 py-4 bg-white rounded-2xl font-semibold text-gray-800 text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-blue-50"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedin className="text-3xl text-blue-600" />
-                <span>LinkedIn</span>
-              </a>
-              <a
-                href="https://topmate.io/sabyasachi_upadhyay/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 px-8 py-4 bg-white rounded-2xl font-semibold text-gray-800 text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-red-50"
-                aria-label="Topmate"
-              >
-                <span className="text-3xl">📅</span>
-                <span>Topmate</span>
-              </a>
-              <a
-                href="https://substack.com/@sabyasachiupadhyay"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 px-8 py-4 bg-white rounded-2xl font-semibold text-gray-800 text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-orange-50"
-                aria-label="Substack"
-              >
-                <SiSubstack className="text-3xl text-orange-600" />
-                <span>Substack</span>
-              </a>
-            </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 

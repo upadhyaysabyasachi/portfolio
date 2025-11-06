@@ -6,7 +6,7 @@ import { useRef } from 'react'
 import { Calendar, ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import { Blog } from '@/types'
-import { formatDate, getAssetPath } from '@/lib/utils'
+import { formatDate } from '@/lib/utils'
 
 interface IdeasProps {
   blogs?: Blog[]
@@ -127,7 +127,7 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
                     {blog._id === '2' && (
                       <div className="flex-shrink-0">
                         <Image
-                          src={getAssetPath('/logos/wep-logo.png')}
+                          src="/logos/wep-logo.png"
                           alt="Women Entrepreneurship Platform"
                           width={64}
                           height={64}

@@ -6,7 +6,6 @@ import { useRef } from 'react'
 import { ExternalLink, Github } from 'lucide-react'
 import Image from 'next/image'
 import { Project } from '@/types'
-import { getAssetPath } from '@/lib/utils'
 
 interface ProjectsProps {
   projects?: Project[]
@@ -112,7 +111,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                   {(project._id === 'personal-1' || project._id === 'personal-2') ? (
                     <div className="relative w-32 h-32">
                       <Image
-                        src={getAssetPath(project._id === 'personal-1' ? '/logos/TODO-logo.png' : '/logos/WEATHER-logo.png')}
+                        src={project._id === 'personal-1' ? '/logos/TODO-logo.png' : '/logos/WEATHER-logo.png'}
                         alt={project.title}
                         fill
                         className="object-contain"
@@ -172,47 +171,6 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
           ))}
         </div>
 
-        {/* NextLeap Fellowship Achievement */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="max-w-4xl mx-auto mb-16"
-        >
-          <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 border-2 border-primary-200 shadow-xl">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="flex-shrink-0">
-                <Image
-                  src={getAssetPath('/images/NextLeap-logo.jpg')}
-                  alt="NextLeap Product Manager Fellowship Top Fellow"
-                  width={200}
-                  height={200}
-                  className="rounded-2xl object-contain"
-                />
-              </div>
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="text-2xl font-bold mb-3">
-                  🏆 Top Fellow - NextLeap Product Manager Fellowship
-                </h3>
-                <p className="text-gray-700 mb-4 leading-relaxed">
-                  Recognized as the Top Fellow in the NextLeap Product Manager Fellowship program. 
-                  Capstone project: <strong>Prime Bee</strong> - An AI-powered digital assistant for Amazon Prime Video 
-                  to solve the "Paradox of Choice" problem, featuring natural language search and personalized content discovery.
-                </p>
-                <a
-                  href="https://assets.nextleap.app/submissions/NLAmazonPrimeVideo-56dae85e-11b4-4ee6-9395-8da4fe57b06a.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  View Capstone Project
-                </a>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
         {/* Projects at Work Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -253,7 +211,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                   {(project._id === '2' || project._id === '3') ? (
                     <div className="relative w-32 h-32">
                       <Image
-                        src={getAssetPath(project._id === '2' ? '/logos/wep-logo.png' : '/logos/ndap-logo.png')}
+                        src={project._id === '2' ? '/logos/wep-logo.png' : '/logos/ndap-logo.png'}
                         alt={project.title}
                         fill
                         className="object-contain"

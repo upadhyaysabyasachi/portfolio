@@ -94,45 +94,24 @@ const Contact = () => {
               </div>
             </motion.div>
 
-            {/* Sambodh IAS YouTube Channel */}
+            {/* 100x Hackathon Demo */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="bg-gradient-to-br from-gray-50 to-red-50 rounded-2xl p-6 border border-gray-100 shadow-lg"
+              className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-6 border border-gray-100 shadow-lg"
             >
-              <h3 className="text-2xl font-bold mb-4">📚 Sambodh IAS</h3>
-              <p className="text-gray-600 mb-4">Check out my YouTube channel for educational content!</p>
-              <a
-                href="https://www.youtube.com/@SambodhIAS"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block aspect-video rounded-xl overflow-hidden shadow-lg mb-4 relative group"
-              >
-                <div className="w-full h-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <svg className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                    </svg>
-                    <p className="text-lg font-semibold">Visit Sambodh IAS</p>
-                    <p className="text-sm opacity-90">Click to watch videos</p>
-                  </div>
-                </div>
-                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity"></div>
-              </a>
-              <a
-                href="https://www.youtube.com/@SambodhIAS"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition-colors"
-              >
-                <span>Visit Channel</span>
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                </svg>
-              </a>
+              <h3 className="text-2xl font-bold mb-4">🏆 100x Hackathon Winner</h3>
+              <p className="text-gray-600 mb-4">My pitch demo for the 100x hackathon</p>
+              <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.loom.com/embed/f1e198437f6d4230b7080384710718fa?sid=8c0f1e4d-0c5a-4f5f-9c2f-8f0d3e4e8f9a"
+                  frameBorder="0"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
             </motion.div>
-
           </div>
         </motion.div>
 

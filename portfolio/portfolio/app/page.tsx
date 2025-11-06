@@ -10,10 +10,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      <Hero 
-        imageSrc="/images/hero-image.jpg" 
-        imageAlt="Sabyasachi Upadhyay - Hackathon Winner"
-      />
+      <Hero />
       <About />
       <Projects />
       <Ideas />
