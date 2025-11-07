@@ -105,18 +105,39 @@ git push
 
 ## Troubleshooting
 
+### "Get Pages site failed" or "HttpError: Not Found"
+This error occurs when GitHub Pages is not enabled in your repository. To fix:
+
+1. **Enable GitHub Pages manually first:**
+   - Go to your repository on GitHub
+   - Click **Settings** → **Pages**
+   - Under **Build and deployment**, select **GitHub Actions** as the source
+   - Save the settings
+
+2. **Verify repository permissions:**
+   - Go to **Settings** → **Actions** → **General**
+   - Under **Workflow permissions**, ensure it's set to **Read and write permissions**
+   - Check **Allow GitHub Actions to create and approve pull requests**
+
+3. **Push the workflow file:**
+   - Make sure the `.github/workflows/deploy.yml` file is committed and pushed
+   - The workflow will automatically enable Pages on first run
+
 ### Build Fails
 - Check the Actions tab for error logs
 - Ensure all dependencies are in `package.json`
 - Verify `next.config.js` is correctly configured
+- Make sure Node.js version matches (workflow uses Node 20)
 
 ### Images Not Loading
 - Make sure all images are in the `/public` folder
 - Check that image paths start with `/` (e.g., `/logos/wep-logo.png`)
+- For project sites, ensure paths include the basePath (e.g., `/RESUME/logos/wep-logo.png`)
 
 ### 404 Errors
 - Ensure `trailingSlash: true` is set in `next.config.js`
 - Check that `basePath` is correctly configured for project sites
+- Verify `USE_BASEPATH` environment variable is set to `'true'` in the workflow
 
 ## Need Help?
 
