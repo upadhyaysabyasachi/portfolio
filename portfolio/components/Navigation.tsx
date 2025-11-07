@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -39,8 +40,15 @@ const Navigation = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <a href="#" className="text-xl sm:text-2xl font-bold font-display">
-            <span className="text-gradient">SU</span>
+          <a href="#" className="flex items-center h-12 sm:h-14">
+            <Image
+              src="/images/bits-logo.png"
+              alt="BITS Pilani Logo"
+              width={50}
+              height={50}
+              className="h-10 w-10 sm:h-12 sm:w-12 object-contain"
+              priority
+            />
           </a>
 
           {/* Desktop Navigation */}
