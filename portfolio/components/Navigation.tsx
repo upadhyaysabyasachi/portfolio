@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
-import Image from 'next/image'
 import { getAssetPath } from '@/lib/utils'
 
 const Navigation = () => {
@@ -42,13 +41,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center h-12 sm:h-14">
-            <Image
+            <img
               src={getAssetPath("/images/bits-logo.png")}
               alt="BITS Pilani Logo"
-              width={50}
-              height={50}
               className="h-10 w-10 sm:h-12 sm:w-12 object-contain"
-              priority
+              loading="eager"
             />
           </a>
 
