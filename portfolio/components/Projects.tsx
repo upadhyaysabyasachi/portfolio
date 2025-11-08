@@ -181,13 +181,14 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
         >
           <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-6 sm:p-8 border-2 border-primary-200 shadow-xl">
             <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8">
-              <div className="flex-shrink-0">
+              <div className="relative flex-shrink-0 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48">
                 <Image
                   src={getAssetPath('/images/NextLeap-logo.jpg')}
                   alt="NextLeap Product Manager Fellowship Top Fellow"
-                  width={200}
-                  height={200}
+                  fill
                   className="rounded-2xl object-contain"
+                  sizes="(min-width: 768px) 12rem, (min-width: 640px) 10rem, 8rem"
+                  priority={false}
                 />
               </div>
               <div className="flex-1 text-center md:text-left">
