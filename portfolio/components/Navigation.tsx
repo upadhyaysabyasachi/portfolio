@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
+import { getAssetPath } from '@/lib/utils'
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -42,7 +43,7 @@ const Navigation = () => {
           {/* Logo */}
           <a href="#" className="flex items-center h-12 sm:h-14">
             <Image
-              src="/images/bits-logo.png"
+              src={getAssetPath("/images/bits-logo.png")}
               alt="BITS Pilani Logo"
               width={50}
               height={50}
