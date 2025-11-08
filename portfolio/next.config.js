@@ -17,11 +17,11 @@ const nextConfig = {
   trailingSlash: true,
   // Only use basePath for GitHub Pages deployment
   ...(useBasePath && {
-    basePath: '/RESUME',
-    assetPrefix: '/RESUME',
+    basePath: '/portfolio',
+    assetPrefix: '/portfolio',
   }),
   env: {
-    NEXT_PUBLIC_BASE_PATH: useBasePath ? '/RESUME' : '',
+    NEXT_PUBLIC_BASE_PATH: useBasePath ? '/portfolio' : '',
   },
 }
 
