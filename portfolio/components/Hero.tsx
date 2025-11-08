@@ -89,19 +89,39 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                 transition={{ duration: 0.6 }}
                 className="w-full lg:w-1/2 flex justify-center lg:justify-start"
               >
-                <div className="relative w-full max-w-xs sm:max-w-md lg:max-w-lg">
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                    <Image
-                      src={getAssetPath(imageSrc)}
-                      alt={imageAlt}
-                      width={600}
-                      height={800}
-                      className="w-full h-auto object-cover"
-                      priority
-                    />
+                <div className="relative w-full max-w-xs sm:max-w-md lg:max-w-lg flex flex-col items-center lg:items-start">
+                  <div className="relative w-full">
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                      <Image
+                        src={getAssetPath(imageSrc)}
+                        alt={imageAlt}
+                        width={600}
+                        height={800}
+                        className="w-full h-auto object-cover"
+                        priority
+                      />
+                    </div>
+                    {/* Decorative gradient overlay */}
+                    <div className="absolute -inset-4 bg-gradient-to-r from-primary-200 to-purple-200 rounded-2xl opacity-20 blur-2xl -z-10" />
                   </div>
-                  {/* Decorative gradient overlay */}
-                  <div className="absolute -inset-4 bg-gradient-to-r from-primary-200 to-purple-200 rounded-2xl opacity-20 blur-2xl -z-10" />
+                  <a
+                    href="https://www.bits-pilani.ac.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-6 flex items-center gap-3 bg-white/90 backdrop-blur-md border border-gray-100 px-4 py-3 rounded-2xl shadow-lg transition-transform hover:scale-[1.02]"
+                  >
+                    <Image
+                      src={getAssetPath('/images/bits-logo.png')}
+                      alt="BITS Pilani"
+                      width={48}
+                      height={48}
+                      className="w-12 h-12 object-contain"
+                    />
+                    <span className="text-sm sm:text-base font-semibold text-gray-700 text-center sm:text-left">
+                      B.E. (Hons) Computer Science<br className="hidden sm:block" />
+                      BITS Pilani
+                    </span>
+                  </a>
                 </div>
               </motion.div>
             )}

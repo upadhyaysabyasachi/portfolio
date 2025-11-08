@@ -40,11 +40,16 @@ const Navigation = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center h-12 sm:h-14">
+          <a
+            href="https://www.bits-pilani.ac.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center h-12 sm:h-14"
+          >
             <img
               src={getAssetPath("/images/bits-logo.png")}
               alt="BITS Pilani Logo"
-              className="h-10 w-10 sm:h-12 sm:w-12 object-contain"
+              className="h-10 w-10 sm:h-12 sm:w-12 object-contain transition-transform hover:scale-[1.02]"
               loading="eager"
             />
           </a>
