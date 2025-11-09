@@ -122,6 +122,13 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                       BITS Pilani
                     </span>
                   </a>
+                  <a
+                    href={getAssetPath('/resume.pdf')}
+                    download
+                    className="mt-4 inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-primary-600 to-purple-600 text-white font-semibold rounded-full shadow-lg transition-transform hover:scale-105"
+                  >
+                    Download Resume (PDF)
+                  </a>
                 </div>
               </motion.div>
             )}
