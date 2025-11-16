@@ -46,7 +46,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
       slug: { current: 'genai-healthcare' },
       description: 'AI-powered assistant for frontline health workers to monitor anemia in women, deployed across 6 blocks in Tamil Nadu.',
       techStack: ['LLMs', 'SLMs', 'Python', 'Healthcare APIs'],
-      link: 'http://206.1.35.49:8501/',
+      link: 'http://206.1.35.55:8501/',
       featured: true,
     },
     {
