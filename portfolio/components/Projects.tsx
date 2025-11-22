@@ -249,6 +249,16 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                     className="absolute inset-0 w-full h-full"
                   />
                 </div>
+              ) : project._id === '3' ? (
+                <div className="relative w-full aspect-video bg-gradient-primary">
+                  <iframe
+                    src="https://www.youtube.com/embed/PLw_BAaROvI"
+                    title="National Data Analytics Platform"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
               ) : project.image ? (
                 <div className="relative h-48 bg-gradient-primary">
                   <Image
@@ -260,10 +270,10 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                 </div>
               ) : (
                 <div className="h-48 bg-gradient-primary flex items-center justify-center">
-                  {(project._id === '2' || project._id === '3') ? (
+                  {project._id === '2' ? (
                     <div className="relative w-32 h-32">
                       <Image
-                        src={getAssetPath(project._id === '2' ? '/logos/wep-logo.png' : '/logos/ndap-logo.png')}
+                        src={getAssetPath('/logos/wep-logo.png')}
                         alt={project.title}
                         fill
                         className="object-contain"
