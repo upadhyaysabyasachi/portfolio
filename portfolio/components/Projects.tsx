@@ -239,7 +239,17 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl overflow-hidden card-hover border border-gray-100 flex flex-col"
             >
-              {project.image && (
+              {project._id === '1' ? (
+                <div className="relative w-full aspect-video bg-gradient-primary">
+                  <iframe
+                    src="https://www.youtube.com/embed/UdLFEb0n0c4"
+                    title="SAHELI AI - GenAI Healthcare Assistant"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
+              ) : project.image ? (
                 <div className="relative h-48 bg-gradient-primary">
                   <Image
                     src={project.image}
@@ -248,8 +258,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                     className="object-cover"
                   />
                 </div>
-              )}
-              {!project.image && (
+              ) : (
                 <div className="h-48 bg-gradient-primary flex items-center justify-center">
                   {(project._id === '2' || project._id === '3') ? (
                     <div className="relative w-32 h-32">
