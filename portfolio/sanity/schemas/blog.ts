@@ -108,6 +108,12 @@ export default {
       type: 'boolean',
       initialValue: false,
     },
+    {
+      name: 'link',
+      title: 'External Link',
+      type: 'url',
+      description: 'URL to the publication (e.g., PDF, article, or external blog post)',
+    },
   ],
   orderings: [
     {

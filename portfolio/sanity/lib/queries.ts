@@ -25,7 +25,8 @@ export const settingsQuery = groq`
       slug,
       excerpt,
       publishedAt,
-      category
+      category,
+      link
     }
   }
 `
@@ -69,7 +70,8 @@ export const blogsQuery = groq`
     publishedAt,
     category,
     tags,
-    featured
+    featured,
+    link
   }
 `
 
@@ -83,7 +85,8 @@ export const blogBySlugQuery = groq`
     coverImage,
     publishedAt,
     category,
-    tags
+    tags,
+    link
   }
 `
 

@@ -22,6 +22,7 @@ export interface Blog {
   category?: string
   tags?: string[]
   featured?: boolean
+  link?: string
 }
 
 export interface Settings {

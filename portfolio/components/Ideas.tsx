@@ -25,6 +25,7 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
       publishedAt: '2022-06-15',
       category: 'Fintech',
       featured: true,
+      link: 'https://www.niti.gov.in/sites/default/files/2023-02/DigitalBanking07202022_compressed.pdf',
     },
     {
       _id: '2',
@@ -34,6 +35,8 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
       publishedAt: '2023-03-10',
       category: 'Social Impact',
       featured: true,
+      link: 'https://www.niti.gov.in/sites/default/files/2021-03/MovingTheNeedle_08032021-compressed.pdf',
+      // TODO: Add the correct external URL here or via Sanity CMS
     },
     {
       _id: '3',
@@ -43,6 +46,9 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
       publishedAt: '2021-11-20',
       category: 'Healthcare Tech',
       featured: true,
+      link: 'https://www.niti.gov.in/sites/default/files/2023-02/HAICReportNITIAayog.pdf'
+      
+      // TODO: Add the correct external URL here or via Sanity CMS
     },
     {
       _id: '4',
@@ -52,6 +58,8 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
       publishedAt: '2023-08-05',
       category: 'Healthcare Policy',
       featured: false,
+      link: 'https://health.economictimes.indiatimes.com/news/industry/promoting-medical-tourism-via-ayushman-bharat-digital-mission/87301743'
+      // TODO: Add the correct external URL here or via Sanity CMS
     },
   ]
 
@@ -152,7 +160,9 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
                   )}
 
                   <a
-                    href={`/blog/${blog.slug.current}`}
+                    href={blog.link || `/blog/${blog.slug.current}`}
+                    target={blog.link ? '_blank' : undefined}
+                    rel={blog.link ? 'noopener noreferrer' : undefined}
                     className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors group-hover:gap-3"
                   >
                     Read More
