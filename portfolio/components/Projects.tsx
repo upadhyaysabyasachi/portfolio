@@ -80,7 +80,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
   const displayProjects = projects.length > 0 ? projects : defaultProjects
 
   return (
-    <section id="projects" className="pt-12 pb-16 sm:pb-24 bg-white" ref={ref}>
+    <section id="projects" className="pt-12 pb-16 sm:pb-24 bg-white dark:bg-gray-950" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6">
         {/* Personal Projects Section */}
         <motion.div
@@ -93,7 +93,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
             Personal <span className="text-gradient">Projects</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-6"></div>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4 sm:px-0">
             Side projects exploring new technologies and creative solutions
           </p>
         </motion.div>
@@ -105,7 +105,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl overflow-hidden card-hover border border-gray-100 flex flex-col"
+              className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl overflow-hidden card-hover border border-gray-100 dark:border-gray-700 flex flex-col"
             >
               {!project.image && (
                 <div className="h-48 bg-gradient-primary flex items-center justify-center">
@@ -127,15 +127,15 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
               )}
 
               <div className="p-4 sm:p-6 flex-1 flex flex-col">
-                <h3 className="text-xl sm:text-2xl font-bold mb-3">{project.title}</h3>
-                <p className="text-sm sm:text-base text-gray-600 mb-4 flex-1">{project.description}</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 dark:text-gray-100">{project.title}</h3>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 flex-1">{project.description}</p>
 
                 {project.techStack && project.techStack.length > 0 && (
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.techStack.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 text-xs sm:text-sm bg-white text-primary-700 rounded-full border border-primary-200"
+                        className="px-3 py-1 text-xs sm:text-sm bg-white dark:bg-gray-800 text-primary-700 dark:text-primary-400 rounded-full border border-primary-200 dark:border-primary-700"
                       >
                         {tech}
                       </span>
@@ -149,7 +149,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm sm:text-base text-primary-600 hover:text-primary-700 font-semibold transition-colors"
+                      className="flex items-center gap-2 text-sm sm:text-base text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-semibold transition-colors"
                     >
                       <ExternalLink className="w-4 h-4" />
                       View Project
@@ -160,7 +160,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm sm:text-base text-gray-600 hover:text-gray-700 font-semibold transition-colors"
+                      className="flex items-center gap-2 text-sm sm:text-base text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 font-semibold transition-colors"
                     >
                       <Github className="w-4 h-4" />
                       GitHub
@@ -179,7 +179,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="max-w-4xl mx-auto mb-16"
         >
-          <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-6 sm:p-8 border-2 border-primary-200 shadow-xl">
+          <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 rounded-3xl p-6 sm:p-8 border-2 border-primary-200 dark:border-primary-700 shadow-xl">
             <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8">
               <div className="relative flex-shrink-0 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48">
                 <Image
@@ -195,7 +195,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                 <h3 className="text-xl sm:text-2xl font-bold mb-3">
                   🏆 Top Fellow - NextLeap Product Manager Fellowship
                 </h3>
-                <p className="text-base sm:text-lg text-gray-700 mb-4 leading-relaxed">
+                <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
                   Recognized as the Top Fellow in the NextLeap Product Manager Fellowship program. 
                   Capstone project: <strong>Prime Bee</strong> - An AI-powered digital assistant for Amazon Prime Video 
                   to solve the "Paradox of Choice" problem, featuring natural language search and personalized content discovery.
@@ -204,7 +204,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                   href="https://assets.nextleap.app/submissions/NLAmazonPrimeVideo-56dae85e-11b4-4ee6-9395-8da4fe57b06a.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors"
+                  className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-semibold transition-colors"
                 >
                   <ExternalLink className="w-4 h-4" />
                   View Capstone Project
@@ -225,7 +225,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
             Projects at <span className="text-gradient">Work</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-6"></div>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4 sm:px-0">
             Building products that create impact at scale across healthcare, entrepreneurship, and technology
           </p>
         </motion.div>
@@ -237,7 +237,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl overflow-hidden card-hover border border-gray-100 flex flex-col"
+              className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl overflow-hidden card-hover border border-gray-100 dark:border-gray-700 flex flex-col"
             >
               {project._id === '1' ? (
                 <div className="relative w-full aspect-video bg-gradient-primary">
@@ -288,15 +288,15 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
               )}
 
               <div className="p-4 sm:p-6 flex-1 flex flex-col">
-                <h3 className="text-xl sm:text-2xl font-bold mb-3">{project.title}</h3>
-                <p className="text-sm sm:text-base text-gray-600 mb-4 flex-1">{project.description}</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 dark:text-gray-100">{project.title}</h3>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 flex-1">{project.description}</p>
 
                 {project.techStack && project.techStack.length > 0 && (
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.techStack.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 text-xs sm:text-sm bg-white text-primary-700 rounded-full border border-primary-200"
+                        className="px-3 py-1 text-xs sm:text-sm bg-white dark:bg-gray-800 text-primary-700 dark:text-primary-400 rounded-full border border-primary-200 dark:border-primary-700"
                       >
                         {tech}
                       </span>
@@ -310,7 +310,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm sm:text-base text-primary-600 hover:text-primary-700 font-semibold transition-colors"
+                      className="flex items-center gap-2 text-sm sm:text-base text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-semibold transition-colors"
                     >
                       <ExternalLink className="w-4 h-4" />
                       View Project
@@ -321,7 +321,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm sm:text-base text-gray-600 hover:text-gray-700 font-semibold transition-colors"
+                      className="flex items-center gap-2 text-sm sm:text-base text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 font-semibold transition-colors"
                     >
                       <Github className="w-4 h-4" />
                       Code

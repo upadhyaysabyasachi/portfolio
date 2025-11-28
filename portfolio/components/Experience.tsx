@@ -94,7 +94,7 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className="py-16 sm:py-24 bg-gradient-to-br from-gray-50 to-blue-50" ref={ref}>
+    <section id="experience" className="py-16 sm:py-24 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -106,7 +106,7 @@ const Experience = () => {
             Experience & <span className="text-gradient">Journey</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-6"></div>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4 sm:px-0">
             From building ML systems to shaping national platforms, my journey has been about creating impact at scale
           </p>
         </motion.div>
@@ -118,13 +118,13 @@ const Experience = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg card-hover border border-gray-100"
+              className="bg-white dark:bg-gray-800 rounded-2xl p-6 sm:p-8 shadow-lg card-hover border border-gray-100 dark:border-gray-700"
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
                     <Briefcase className="w-5 h-5 text-primary-600" />
-                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900">{exp.role}</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100">{exp.role}</h3>
                     {exp.current && (
                       <span className="px-3 py-1 text-xs font-semibold bg-gradient-primary text-white rounded-full">
                         Current
@@ -132,8 +132,8 @@ const Experience = () => {
                     )}
                   </div>
                   <p className="text-lg sm:text-xl text-primary-600 font-semibold mb-2">{exp.company}</p>
-                  <p className="text-gray-600 italic mb-3">{exp.description}</p>
-                  <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+                  <p className="text-gray-600 dark:text-gray-400 italic mb-3">{exp.description}</p>
+                  <div className="flex flex-wrap gap-4 text-sm text-gray-500 dark:text-gray-400">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
                       <span>{exp.duration}</span>
@@ -148,8 +148,8 @@ const Experience = () => {
 
               <ul className="space-y-2 mb-4">
                 {exp.highlights.map((highlight, idx) => (
-                  <li key={idx} className="flex gap-3 text-gray-700">
-                    <span className="text-primary-600 mt-1.5">•</span>
+                  <li key={idx} className="flex gap-3 text-gray-700 dark:text-gray-300">
+                    <span className="text-primary-600 dark:text-primary-400 mt-1.5">•</span>
                     <span>{highlight}</span>
                   </li>
                 ))}
@@ -159,7 +159,7 @@ const Experience = () => {
                 {exp.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1 text-sm bg-blue-50 text-primary-700 rounded-full border border-primary-200"
+                    className="px-3 py-1 text-sm bg-blue-50 dark:bg-blue-900/30 text-primary-700 dark:text-primary-400 rounded-full border border-primary-200 dark:border-primary-700"
                   >
                     {tag}
                   </span>

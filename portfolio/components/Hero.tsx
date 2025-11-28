@@ -37,7 +37,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
   }
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 pt-20">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-20">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -108,7 +108,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                     href="https://www.bits-pilani.ac.in/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-6 flex items-center gap-3 bg-white/90 backdrop-blur-md border border-gray-100 px-4 py-3 rounded-2xl shadow-lg transition-transform hover:scale-[1.02]"
+                    className="mt-6 flex items-center gap-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md border border-gray-100 dark:border-gray-700 px-4 py-3 rounded-2xl shadow-lg transition-transform hover:scale-[1.02]"
                   >
                     <Image
                       src={getAssetPath('/images/bits-logo.png')}
@@ -117,7 +117,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                       height={48}
                       className="w-12 h-12 object-contain"
                     />
-                    <span className="text-sm sm:text-base font-semibold text-gray-700 text-center sm:text-left">
+                    <span className="text-sm sm:text-base font-semibold text-gray-700 dark:text-gray-300 text-center sm:text-left">
                       B.E. (Hons) Computer Science<br className="hidden sm:block" />
                       BITS Pilani
                     </span>
@@ -154,7 +154,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="mb-8"
               >
-                <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-700 h-12 sm:h-16 flex items-center justify-center lg:justify-start">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-700 dark:text-gray-300 h-12 sm:h-16 flex items-center justify-center lg:justify-start">
                   <motion.span
                     key={currentHeadline}
                     initial={{ opacity: 0, y: 20 }}
@@ -172,7 +172,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-8 sm:mb-12 max-w-3xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0"
+                className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 mb-8 sm:mb-12 max-w-3xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0"
               >
                 {bio ||
                   "Building innovative products that drive growth and create meaningful impact. Passionate about leveraging AI and technology to solve real-world problems and empower communities."}
@@ -192,7 +192,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                 </a>
                 <a
                   href="#projects"
-                  className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-primary-600 text-primary-600 rounded-full font-semibold hover:bg-primary-50 hover:scale-105 transition-all duration-300 text-center text-sm sm:text-base"
+                  className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-primary-600 dark:border-primary-500 text-primary-600 dark:text-primary-400 rounded-full font-semibold hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:scale-105 transition-all duration-300 text-center text-sm sm:text-base"
                 >
                   View My Work
                 </a>
@@ -210,7 +210,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                     href="https://github.com/upadhyaysabyasachi"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-white rounded-xl sm:rounded-2xl font-semibold text-gray-800 text-sm sm:text-base md:text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-gray-50"
+                    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl font-semibold text-gray-800 dark:text-gray-200 text-sm sm:text-base md:text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-gray-50 dark:hover:bg-gray-700"
                     aria-label="GitHub"
                   >
                     <FaGithub className="text-xl sm:text-2xl md:text-3xl" />
@@ -220,7 +220,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                     href="https://huggingface.co/sachihugsai"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-white rounded-xl sm:rounded-2xl font-semibold text-gray-800 text-sm sm:text-base md:text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-yellow-50"
+                    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl font-semibold text-gray-800 dark:text-gray-200 text-sm sm:text-base md:text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-yellow-50 dark:hover:bg-gray-700"
                     aria-label="HuggingFace"
                   >
                     <span className="text-xl sm:text-2xl md:text-3xl">🤗</span>
@@ -230,7 +230,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                     href="https://www.linkedin.com/in/sabyasachi-upadhyay-293b0134/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-white rounded-xl sm:rounded-2xl font-semibold text-gray-800 text-sm sm:text-base md:text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-blue-50"
+                    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl font-semibold text-gray-800 dark:text-gray-200 text-sm sm:text-base md:text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-blue-50 dark:hover:bg-gray-700"
                     aria-label="LinkedIn"
                   >
                     <FaLinkedin className="text-xl sm:text-2xl md:text-3xl text-blue-600" />
@@ -240,7 +240,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                     href="https://topmate.io/sabyasachi_upadhyay/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-white rounded-xl sm:rounded-2xl font-semibold text-gray-800 text-sm sm:text-base md:text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-red-50"
+                    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl font-semibold text-gray-800 dark:text-gray-200 text-sm sm:text-base md:text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-red-50 dark:hover:bg-gray-700"
                     aria-label="Topmate"
                   >
                     <span className="text-xl sm:text-2xl md:text-3xl">📅</span>
@@ -250,7 +250,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                     href="https://substack.com/@sabyasachiupadhyay"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-white rounded-xl sm:rounded-2xl font-semibold text-gray-800 text-sm sm:text-base md:text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-orange-50"
+                    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl font-semibold text-gray-800 dark:text-gray-200 text-sm sm:text-base md:text-lg shadow-lg transition-all hover:scale-110 hover:shadow-2xl hover:bg-orange-50 dark:hover:bg-gray-700"
                     aria-label="Substack"
                   >
                     <SiSubstack className="text-xl sm:text-2xl md:text-3xl text-orange-600" />
@@ -275,7 +275,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
           ease: 'easeInOut',
         }}
       >
-        <ArrowDown className="w-8 h-8 text-gray-400 hover:text-primary-600 transition-colors" />
+        <ArrowDown className="w-8 h-8 text-gray-400 dark:text-gray-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" />
       </motion.button>
     </section>
   )

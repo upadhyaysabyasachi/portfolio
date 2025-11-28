@@ -28,7 +28,7 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="pt-20 sm:pt-24 pb-12 bg-white" ref={ref}>
+    <section id="about" className="pt-20 sm:pt-24 pb-12 bg-white dark:bg-gray-950" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -50,7 +50,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-20"
           >
-            <div className="prose prose-lg max-w-none text-gray-600">
+            <div className="prose prose-lg max-w-none text-gray-600 dark:text-gray-400">
               <p className="text-base sm:text-lg md:text-xl leading-relaxed mb-4 sm:mb-6">
                 I'm a <strong>Product Leader</strong> and <strong>Growth Strategist</strong> with a passion for leveraging{' '}
                 <strong>AI for social good</strong>. My journey spans from building fraud detection systems at Ola to shaping
@@ -82,13 +82,13 @@ const About = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                  className="bg-gradient-to-br from-gray-50 to-blue-50 p-6 sm:p-8 rounded-2xl card-hover border border-gray-100"
+                  className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 p-6 sm:p-8 rounded-2xl card-hover border border-gray-100 dark:border-gray-700"
                 >
                   <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center mb-4">
                     <value.icon className="w-7 h-7 text-white" />
                   </div>
                   <h4 className="text-xl font-semibold mb-3">{value.title}</h4>
-                  <p className="text-gray-600">{value.description}</p>
+                  <p className="text-gray-600 dark:text-gray-400">{value.description}</p>
                 </motion.div>
               ))}
             </div>
