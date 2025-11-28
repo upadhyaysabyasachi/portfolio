@@ -118,7 +118,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                       className="w-12 h-12 object-contain"
                     />
                     <span className="text-sm sm:text-base font-semibold text-gray-700 dark:text-gray-300 text-center sm:text-left">
-                      B.E. (Hons) Computer Science<br className="hidden sm:block" />
+                      B.E. (Hons) Computer Science<br />
                       BITS Pilani
                     </span>
                   </a>
