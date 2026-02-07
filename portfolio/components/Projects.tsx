@@ -19,6 +19,15 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
   const personalProjects: Project[] = [
     {
       _id: 'personal-1',
+      title: 'Sambodh IAS',
+      slug: { current: 'sambodh-ias' },
+      description: 'AI-powered assessment platform for UPSC aspirants. Capstone project from GenAI certification: get instant, detailed feedback on answers, personalized gap analysis with targeted recommendations, and connect with verified mentors for guidance. Built to help candidates master their UPSC journey with data-driven insights.',
+      techStack: ['GenAI', 'LLMs', 'Assessment', 'UPSC'],
+      link: 'https://www.sambodh-ias.in/login',
+      featured: false,
+    },
+    {
+      _id: 'personal-2',
       title: 'To Do App',
       slug: { current: 'todo-app' },
       description: 'A beautiful task manager built with Vibe Coding principles - clean, simple, and effective.',
@@ -28,7 +37,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
       featured: false,
     },
     {
-      _id: 'personal-2',
+      _id: 'personal-3',
       title: 'Weather App - Tool Calling',
       slug: { current: 'weather-app' },
       description: 'AI-powered weather app using Groq AI with tool calling to fetch live weather data from Tomorrow.io API.',
@@ -109,10 +118,16 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
             >
               {!project.image && (
                 <div className="h-48 bg-gradient-primary flex items-center justify-center">
-                  {(project._id === 'personal-1' || project._id === 'personal-2') ? (
+                  {(project._id === 'personal-1' || project._id === 'personal-2' || project._id === 'personal-3') ? (
                     <div className="relative w-32 h-32">
                       <Image
-                        src={getAssetPath(project._id === 'personal-1' ? '/logos/TODO-logo.png' : '/logos/WEATHER-logo.png')}
+                        src={getAssetPath(
+                          project._id === 'personal-1'
+                            ? '/logos/sambodh-ias-logo.png'
+                            : project._id === 'personal-2'
+                              ? '/logos/TODO-logo.png'
+                              : '/logos/WEATHER-logo.png'
+                        )}
                         alt={project.title}
                         fill
                         className="object-contain"
