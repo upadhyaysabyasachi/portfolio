@@ -36,7 +36,7 @@ const CertificationsAwards = () => {
             className="bg-gray-800 dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-700 overflow-hidden card-hover"
           >
             <div className="p-6 sm:p-8">
-              <div className="flex flex-col sm:flex-row sm:items-start gap-6">
+              <div className="flex flex-col sm:flex-row sm:items-start gap-6 mb-6">
                 <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center shrink-0">
                   <Award className="w-7 h-7 text-white" />
                 </div>
@@ -44,19 +44,31 @@ const CertificationsAwards = () => {
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-100 mb-2">
                     GenAI Certification
                   </h3>
-                  <p className="text-gray-400 mb-4">
+                  <p className="text-gray-400">
                     Certified in Generative AI, covering LLMs, prompt engineering, and building AI-powered applications.
                   </p>
-                  <a
-                    href={getAssetPath('/Sabyasachi_Certificate_100x.pdf')}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-primary-900/50 text-primary-300 rounded-lg font-medium hover:bg-primary-800/50 transition-colors"
-                  >
-                    <FileText className="w-4 h-4" />
-                    View Certificate (PDF)
-                  </a>
                 </div>
+              </div>
+              {/* Certificate viewer - visible as in Certifications & Awards */}
+              <div className="rounded-xl overflow-hidden border border-gray-600 bg-gray-900">
+                <p className="text-sm font-semibold text-gray-300 text-center py-2 px-3 border-b border-gray-700">
+                  GenAI Certification
+                </p>
+                <div className="relative w-full aspect-[3/4] min-h-[280px] max-h-[420px] bg-gray-700">
+                  <iframe
+                    src={`${getAssetPath('/Sabyasachi_Certificate_100x.pdf')}#view=FitH`}
+                    title="GenAI 100x Certificate"
+                    className="absolute inset-0 w-full h-full border-0"
+                  />
+                </div>
+                <a
+                  href={getAssetPath('/Sabyasachi_Certificate_100x.pdf')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center text-sm text-primary-400 hover:text-primary-300 font-medium py-2.5 border-t border-gray-700 hover:bg-gray-800/50 transition-colors"
+                >
+                  Open in new tab
+                </a>
               </div>
             </div>
           </motion.div>
