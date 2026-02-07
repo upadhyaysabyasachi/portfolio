@@ -76,14 +76,6 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
       link: 'https://ndap.niti.gov.in',
       featured: true,
     },
-    {
-      _id: '4',
-      title: 'Fraud Detection Engine',
-      slug: { current: 'fraud-detection' },
-      description: 'ML-powered fraud detection system using graph algorithms to identify fraudulent ride patterns with 80% accuracy.',
-      techStack: ['Apache Spark', 'GraphX', 'R', 'Machine Learning'],
-      featured: false,
-    },
   ]
 
   const displayProjects = projects.length > 0 ? projects : defaultProjects
