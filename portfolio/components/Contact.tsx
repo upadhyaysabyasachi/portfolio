@@ -76,10 +76,10 @@ const Contact = () => {
               initial={{ opacity: 0, x: -30 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-gradient-to-br from-gray-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-4 sm:p-6 border border-gray-100 dark:border-gray-700 shadow-lg"
+              className="bg-gradient-to-br from-gray-100 to-purple-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 shadow-lg"
             >
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">🎭 Stand-up Comedy</h3>
-              <p className="text-gray-600 dark:text-gray-200 mb-4">Watch me perform at an open mic night!</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-900 dark:text-gray-100">🎭 Stand-up Comedy</h3>
+              <p className="text-gray-700 dark:text-gray-200 mb-4">Watch me perform at an open mic night!</p>
               <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
                 <iframe
                   width="100%"
@@ -99,10 +99,10 @@ const Contact = () => {
               initial={{ opacity: 0, x: 30 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="bg-gradient-to-br from-gray-50 to-red-50 rounded-2xl p-4 sm:p-6 border border-gray-100 shadow-lg"
+              className="bg-gradient-to-br from-gray-100 to-red-100 dark:from-gray-800 dark:to-gray-800 rounded-2xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 shadow-lg"
             >
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">📚 Sambodh IAS</h3>
-              <p className="text-gray-600 dark:text-gray-200 mb-4">Check out my YouTube channel for educational content!</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-900 dark:text-gray-100">📚 Sambodh IAS</h3>
+              <p className="text-gray-700 dark:text-gray-200 mb-4">Check out my YouTube channel for educational content!</p>
               <a
                 href="https://www.youtube.com/@SambodhIAS"
                 target="_blank"
