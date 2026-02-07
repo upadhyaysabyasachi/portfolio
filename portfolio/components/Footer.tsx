@@ -16,7 +16,7 @@ const Footer = () => {
                 Sabyasachi Upadhyay
               </span>
             </h3>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-400 dark:text-gray-200 leading-relaxed">
               Product Leader, Growth Strategist, and AI for Good advocate. Building products that create meaningful
               impact at scale.
             </p>
@@ -27,32 +27,32 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#about" className="text-gray-400 hover:text-primary-400 transition-colors">
+                <a href="#about" className="text-gray-400 dark:text-gray-200 hover:text-primary-400 transition-colors">
                   About
                 </a>
               </li>
               <li>
-                <a href="#experience" className="text-gray-400 hover:text-primary-400 transition-colors">
+                <a href="#experience" className="text-gray-400 dark:text-gray-200 hover:text-primary-400 transition-colors">
                   Experience
                 </a>
               </li>
               <li>
-                <a href="#certifications" className="text-gray-400 hover:text-primary-400 transition-colors">
+                <a href="#certifications" className="text-gray-400 dark:text-gray-200 hover:text-primary-400 transition-colors">
                   Certifications
                 </a>
               </li>
               <li>
-                <a href="#projects" className="text-gray-400 hover:text-primary-400 transition-colors">
+                <a href="#projects" className="text-gray-400 dark:text-gray-200 hover:text-primary-400 transition-colors">
                   Projects
                 </a>
               </li>
               <li>
-                <a href="#ideas" className="text-gray-400 hover:text-primary-400 transition-colors">
+                <a href="#ideas" className="text-gray-400 dark:text-gray-200 hover:text-primary-400 transition-colors">
                   Ideas & Writings
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-400 hover:text-primary-400 transition-colors">
+                <a href="#contact" className="text-gray-400 dark:text-gray-200 hover:text-primary-400 transition-colors">
                   Contact
                 </a>
               </li>
@@ -62,7 +62,7 @@ const Footer = () => {
           {/* Fun Fact */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Beyond Work</h4>
-            <ul className="space-y-2 text-gray-400">
+            <ul className="space-y-2 text-gray-400 dark:text-gray-200">
               <li className="flex items-center gap-2">
                 🎭 Stand-up Comedy
               </li>
@@ -81,7 +81,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 pt-8">
           <div className="flex items-center justify-center">
-            <p className="text-gray-400 text-sm flex items-center gap-2">
+            <p className="text-gray-400 dark:text-gray-200 text-sm flex items-center gap-2">
               © {currentYear} Sabyasachi Upadhyay. Built with <Heart className="w-4 h-4 text-red-500" /> and{' '}
               <Coffee className="w-4 h-4 text-primary-400" />
             </p>

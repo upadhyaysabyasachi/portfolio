@@ -99,7 +99,7 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
             Research and  <span className="text-gradient">Publications</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-6"></div>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4 sm:px-0">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-200 max-w-3xl mx-auto px-4 sm:px-0">
             Thoughts on product, technology, policy, and creating meaningful impact
           </p>
         </motion.div>
@@ -125,7 +125,7 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
                         {blog.category}
                       </span>
                     )}
-                    <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+                    <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-300">
                       <Calendar className="w-4 h-4" />
                       <time dateTime={blog.publishedAt}>{formatDate(blog.publishedAt)}</time>
                     </div>
@@ -147,12 +147,12 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
                       {blog.title}
                     </h3>
                   </div>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">{blog.excerpt}</p>
+                  <p className="text-gray-600 dark:text-gray-200 mb-4 leading-relaxed">{blog.excerpt}</p>
 
                   {blog.tags && blog.tags.length > 0 && (
                     <div className="flex flex-wrap gap-2 mb-4">
                       {blog.tags.map((tag) => (
-                        <span key={tag} className="text-sm text-gray-500 dark:text-gray-400">
+                        <span key={tag} className="text-sm text-gray-500 dark:text-gray-300">
                           #{tag}
                         </span>
                       ))}

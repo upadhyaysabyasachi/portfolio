@@ -44,14 +44,14 @@ const CertificationsAwards = () => {
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-100 mb-2">
                     GenAI Certification
                   </h3>
-                  <p className="text-gray-400">
+                  <p className="text-gray-400 dark:text-gray-200">
                     Certified in Generative AI, covering LLMs, prompt engineering, and building AI-powered applications.
                   </p>
                 </div>
               </div>
               {/* Certificate viewer - visible as in Certifications & Awards */}
               <div className="rounded-xl overflow-hidden border border-gray-600 bg-gray-900">
-                <p className="text-sm font-semibold text-gray-300 text-center py-2 px-3 border-b border-gray-700">
+                <p className="text-sm font-semibold text-gray-200 text-center py-2 px-3 border-b border-gray-700">
                   GenAI Certification
                 </p>
                 <div className="relative w-full aspect-[3/4] min-h-[280px] max-h-[420px] bg-gray-700">
@@ -100,7 +100,7 @@ const CertificationsAwards = () => {
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-100 mb-2">
                     Winner — Ola Productivity Hackathon
                   </h3>
-                  <p className="text-gray-400 mb-4">
+                  <p className="text-gray-400 dark:text-gray-200 mb-4">
                     Recognized as a winner of the Ola Productivity Hackathon for building impactful solutions.
                   </p>
                   <a

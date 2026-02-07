@@ -172,7 +172,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 mb-8 sm:mb-12 max-w-3xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0"
+                className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-200 mb-8 sm:mb-12 max-w-3xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0"
               >
                 {bio ||
                   "Building innovative products that drive growth and create meaningful impact. Passionate about leveraging AI and technology to solve real-world problems and empower communities."}

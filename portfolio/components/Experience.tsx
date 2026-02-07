@@ -106,7 +106,7 @@ const Experience = () => {
             Experience & <span className="text-gradient">Journey</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-6"></div>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4 sm:px-0">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-200 max-w-3xl mx-auto px-4 sm:px-0">
             From building ML systems to shaping national platforms, my journey has been about creating impact at scale
           </p>
         </motion.div>
@@ -132,8 +132,8 @@ const Experience = () => {
                     )}
                   </div>
                   <p className="text-lg sm:text-xl text-primary-600 font-semibold mb-2">{exp.company}</p>
-                  <p className="text-gray-600 dark:text-gray-400 italic mb-3">{exp.description}</p>
-                  <div className="flex flex-wrap gap-4 text-sm text-gray-500 dark:text-gray-400">
+                  <p className="text-gray-600 dark:text-gray-200 italic mb-3">{exp.description}</p>
+                  <div className="flex flex-wrap gap-4 text-sm text-gray-500 dark:text-gray-300">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
                       <span>{exp.duration}</span>
@@ -148,7 +148,7 @@ const Experience = () => {
 
               <ul className="space-y-2 mb-4">
                 {exp.highlights.map((highlight, idx) => (
-                  <li key={idx} className="flex gap-3 text-gray-700 dark:text-gray-300">
+                  <li key={idx} className="flex gap-3 text-gray-700 dark:text-gray-200">
                     <span className="text-primary-600 dark:text-primary-400 mt-1.5">•</span>
                     <span>{highlight}</span>
                   </li>

@@ -79,7 +79,7 @@ const Contact = () => {
               className="bg-gradient-to-br from-gray-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-4 sm:p-6 border border-gray-100 dark:border-gray-700 shadow-lg"
             >
               <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">🎭 Stand-up Comedy</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">Watch me perform at an open mic night!</p>
+              <p className="text-gray-600 dark:text-gray-200 mb-4">Watch me perform at an open mic night!</p>
               <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
                 <iframe
                   width="100%"
@@ -102,7 +102,7 @@ const Contact = () => {
               className="bg-gradient-to-br from-gray-50 to-red-50 rounded-2xl p-4 sm:p-6 border border-gray-100 shadow-lg"
             >
               <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">📚 Sambodh IAS</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">Check out my YouTube channel for educational content!</p>
+              <p className="text-gray-600 dark:text-gray-200 mb-4">Check out my YouTube channel for educational content!</p>
               <a
                 href="https://www.youtube.com/@SambodhIAS"
                 target="_blank"
@@ -146,7 +146,7 @@ const Contact = () => {
             Let's <span className="text-gradient">Connect</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-6"></div>
-          <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto px-4 sm:px-0">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-200 max-w-4xl mx-auto px-4 sm:px-0">
             Have a project idea? Want to collaborate? Want to hire me? Or just want to say hi?
           </p>
         </motion.div>
@@ -170,7 +170,7 @@ const Contact = () => {
                     <p className="font-semibold mb-1">Email</p>
                     <a
                       href="mailto:sabyasachi.upadhyay4@gmail.com"
-                      className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                      className="text-gray-600 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                     >
                       sabyasachi.upadhyay4@gmail.com
                     </a>
@@ -185,7 +185,7 @@ const Contact = () => {
                     <p className="font-semibold mb-1">Phone</p>
                     <a
                       href="tel:+919741263004"
-                      className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                      className="text-gray-600 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                     >
                       +91 9741263004
                     </a>
@@ -198,7 +198,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold mb-1">Location</p>
-                    <p className="text-gray-600 dark:text-gray-400">Bengaluru, India</p>
+                    <p className="text-gray-600 dark:text-gray-200">Bengaluru, India</p>
                   </div>
                 </div>
               </div>
@@ -213,7 +213,7 @@ const Contact = () => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center text-gray-600 dark:text-gray-400 transition-all hover:scale-110 ${social.color}`}
+                    className={`w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center text-gray-600 dark:text-gray-200 transition-all hover:scale-110 ${social.color}`}
                     aria-label={social.name}
                   >
                     <social.icon className="w-6 h-6" />
@@ -224,7 +224,7 @@ const Contact = () => {
 
             <div className="bg-gradient-to-br from-primary-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 border border-primary-100 dark:border-gray-700">
               <h4 className="font-semibold mb-2 dark:text-gray-100">Open to Opportunities</h4>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">
+              <p className="text-gray-600 dark:text-gray-200 text-sm">
                 I'm always interested in hearing about new projects, collaboration opportunities, or just having a
                 conversation about product, AI, and impact-driven technology.
               </p>

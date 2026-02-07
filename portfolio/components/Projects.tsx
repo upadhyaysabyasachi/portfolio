@@ -102,7 +102,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
             Personal <span className="text-gradient">Projects</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-6"></div>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4 sm:px-0">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-200 max-w-3xl mx-auto px-4 sm:px-0">
             Side projects exploring new technologies and creative solutions
           </p>
         </motion.div>
@@ -143,7 +143,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
 
               <div className="p-4 sm:p-6 flex-1 flex flex-col">
                 <h3 className="text-xl sm:text-2xl font-bold mb-3 dark:text-gray-100">{project.title}</h3>
-                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 flex-1">{project.description}</p>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-200 mb-4 flex-1">{project.description}</p>
 
                 {project.techStack && project.techStack.length > 0 && (
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -175,7 +175,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm sm:text-base text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 font-semibold transition-colors"
+                      className="flex items-center gap-2 text-sm sm:text-base text-gray-600 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-300 font-semibold transition-colors"
                     >
                       <Github className="w-4 h-4" />
                       GitHub
@@ -210,7 +210,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                 <h3 className="text-xl sm:text-2xl font-bold mb-3">
                   🏆 Top Fellow - NextLeap Product Manager Fellowship
                 </h3>
-                <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                <p className="text-base sm:text-lg text-gray-700 dark:text-gray-200 mb-4 leading-relaxed">
                   Recognized as the Top Fellow in the NextLeap Product Manager Fellowship program. 
                   Capstone project: <strong>Prime Bee</strong> - An AI-powered digital assistant for Amazon Prime Video 
                   to solve the "Paradox of Choice" problem, featuring natural language search and personalized content discovery.
@@ -240,7 +240,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
             Projects at <span className="text-gradient">Work</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-6"></div>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4 sm:px-0">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-200 max-w-3xl mx-auto px-4 sm:px-0">
             Building products that create impact at scale across healthcare, entrepreneurship, and technology
           </p>
         </motion.div>
@@ -304,7 +304,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
 
               <div className="p-4 sm:p-6 flex-1 flex flex-col">
                 <h3 className="text-xl sm:text-2xl font-bold mb-3 dark:text-gray-100">{project.title}</h3>
-                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 flex-1">{project.description}</p>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-200 mb-4 flex-1">{project.description}</p>
 
                 {project.techStack && project.techStack.length > 0 && (
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -336,7 +336,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm sm:text-base text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 font-semibold transition-colors"
+                      className="flex items-center gap-2 text-sm sm:text-base text-gray-600 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-300 font-semibold transition-colors"
                     >
                       <Github className="w-4 h-4" />
                       Code
