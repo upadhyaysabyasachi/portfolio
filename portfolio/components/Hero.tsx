@@ -129,6 +129,27 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                   >
                     Download Resume (PDF)
                   </a>
+                  {/* GenAI 100x Certificate - visible on landing page */}
+                  <div className="mt-4 w-full max-w-[280px] sm:max-w-[320px] rounded-xl overflow-hidden border border-gray-200 dark:border-gray-600 shadow-lg bg-white dark:bg-gray-800">
+                    <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 text-center py-1.5 px-2 border-b border-gray-100 dark:border-gray-700">
+                      GenAI Certification
+                    </p>
+                    <div className="relative w-full aspect-[3/4] min-h-[200px] bg-gray-100 dark:bg-gray-700">
+                      <iframe
+                        src={`${getAssetPath('/Sabyasachi_Certificate_100x.pdf')}#view=FitH`}
+                        title="GenAI 100x Certificate"
+                        className="absolute inset-0 w-full h-full border-0"
+                      />
+                    </div>
+                    <a
+                      href={getAssetPath('/Sabyasachi_Certificate_100x.pdf')}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-center text-xs text-primary-600 dark:text-primary-400 hover:underline py-1.5"
+                    >
+                      Open in new tab
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             )}

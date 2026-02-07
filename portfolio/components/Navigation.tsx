@@ -22,7 +22,7 @@ const Navigation = () => {
     { name: 'Home', href: '#' },
     { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
-    { name: 'Awards', href: '#certifications' },
+    { name: 'Certifications', href: '#certifications' },
     { name: 'Projects', href: '#projects' },
     { name: 'Publications', href: '#ideas' },
     { name: 'Contact', href: '#contact' },
@@ -34,7 +34,7 @@ const Navigation = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/90 backdrop-blur-md shadow-lg'
+          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg'
           : 'bg-transparent'
       }`}
     >
@@ -61,7 +61,7 @@ const Navigation = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm lg:text-base text-gray-700 hover:text-primary-600 transition-colors font-medium"
+                className="text-sm lg:text-base text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium"
               >
                 {link.name}
               </a>
@@ -77,7 +77,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-gray-700 hover:text-primary-600 transition-colors"
+            className="md:hidden p-2 text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -90,7 +90,7 @@ const Navigation = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden py-4 border-t border-gray-200"
+            className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700"
           >
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
@@ -98,7 +98,7 @@ const Navigation = () => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-gray-700 hover:text-primary-600 transition-colors font-medium py-2"
+                  className="text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium py-2"
                 >
                   {link.name}
                 </a>

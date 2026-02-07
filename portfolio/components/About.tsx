@@ -28,7 +28,7 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="pt-20 sm:pt-24 pb-12 bg-white" ref={ref}>
+    <section id="about" className="pt-20 sm:pt-24 pb-12 bg-white dark:bg-gray-950" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

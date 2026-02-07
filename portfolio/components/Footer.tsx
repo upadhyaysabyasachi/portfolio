@@ -38,7 +38,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#certifications" className="text-gray-400 hover:text-primary-400 transition-colors">
-                  Awards
+                  Certifications
                 </a>
               </li>
               <li>

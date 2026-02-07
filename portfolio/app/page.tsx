@@ -16,8 +16,8 @@ export default function Home() {
         imageAlt="Sabyasachi Upadhyay - Hackathon Winner"
       />
       <About />
-      <CertificationsAwards />
       <Projects />
+      <CertificationsAwards />
       <Ideas />
       <Contact />
       <Footer />
