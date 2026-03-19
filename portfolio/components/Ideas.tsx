@@ -36,7 +36,6 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
       category: 'Social Impact',
       featured: true,
       link: 'https://www.niti.gov.in/sites/default/files/2021-03/MovingTheNeedle_08032021-compressed.pdf',
-      // TODO: Add the correct external URL here or via Sanity CMS
     },
     {
       _id: '3',
@@ -46,9 +45,7 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
       publishedAt: '2021-11-20',
       category: 'Healthcare Tech',
       featured: true,
-      link: 'https://www.niti.gov.in/sites/default/files/2023-02/HAICReportNITIAayog.pdf'
-      
-      // TODO: Add the correct external URL here or via Sanity CMS
+      link: 'https://www.niti.gov.in/sites/default/files/2023-02/HAICReportNITIAayog.pdf',
     },
     {
       _id: '4',
@@ -58,8 +55,7 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
       publishedAt: '2023-08-05',
       category: 'Healthcare Policy',
       featured: false,
-      link: 'https://health.economictimes.indiatimes.com/news/industry/promoting-medical-tourism-via-ayushman-bharat-digital-mission/87301743'
-      // TODO: Add the correct external URL here or via Sanity CMS
+      link: 'https://health.economictimes.indiatimes.com/news/industry/promoting-medical-tourism-via-ayushman-bharat-digital-mission/87301743',
     },
   ]
 
@@ -105,7 +101,7 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
         </motion.div>
 
         <div className="max-w-5xl mx-auto space-y-6">
-          {displayBlogs.map((blog, index) => (
+          {displayBlogs.slice(0, 4).map((blog, index) => (
             <motion.article
               key={blog._id}
               initial={{ opacity: 0, y: 30 }}
@@ -173,6 +169,21 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
             </motion.article>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="text-center mt-12"
+        >
+          <a
+            href="/blog"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+          >
+            View All Publications
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </motion.div>
       </div>
     </section>
   )

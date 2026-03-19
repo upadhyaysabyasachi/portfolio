@@ -1,6 +1,7 @@
 import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
+import Experience from '@/components/Experience'
 import CertificationsAwards from '@/components/CertificationsAwards'
 import Projects from '@/components/Projects'
 import Ideas from '@/components/Ideas'
@@ -11,11 +12,12 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      <Hero 
-        imageSrc="/images/hero-image.jpg" 
+      <Hero
+        imageSrc="/images/hero-image.jpg"
         imageAlt="Sabyasachi Upadhyay - Hackathon Winner"
       />
       <About />
+      <Experience />
       <Projects />
       <CertificationsAwards />
       <Ideas />
