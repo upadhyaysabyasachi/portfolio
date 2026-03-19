@@ -46,6 +46,15 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
       githubLink: 'https://github.com/upadhyaysabyasachi/WEATHER-APP',
       featured: false,
     },
+    {
+      _id: 'personal-4',
+      title: 'PatchUp',
+      slug: { current: 'patchup' },
+      description: 'A voice-first relationship simulator where you practice convincing an angry AI girlfriend to forgive you. She speaks in expressive Indian voices (Sarvam Bulbul V3), you speak back (Sarvam Saarika STT), and an LLM (Sarvam-M) judges your responses in real-time with a live Patch-Up Meter.',
+      techStack: ['Sarvam AI', 'Voice AI', 'LLM', 'Real-time'],
+      link: 'https://patch-up-zeta.vercel.app/',
+      featured: false,
+    },
   ]
 
   const defaultProjects: Project[] = [
@@ -108,30 +117,34 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl overflow-hidden card-hover border border-gray-100 dark:border-gray-700 flex flex-col"
             >
-              {!project.image && (
-                <div className="h-48 bg-gradient-primary flex items-center justify-center">
-                  {(project._id === 'personal-1' || project._id === 'personal-2' || project._id === 'personal-3') ? (
-                    <div className="relative w-32 h-32">
+              {(() => {
+                const screenshotMap: Record<string, string> = {
+                  'personal-1': '/images/sambodh-screenshot.png',
+                  'personal-2': '/images/todo-screenshot.png',
+                  'personal-3': '/images/weather-screenshot.png',
+                  'personal-4': '/images/patchup-screenshot.png',
+                }
+                const screenshot = screenshotMap[project._id]
+                if (screenshot) {
+                  return (
+                    <div className="relative h-48 overflow-hidden">
                       <Image
-                        src={getAssetPath(
-                          project._id === 'personal-1'
-                            ? '/logos/sambodh-ias-logo.png'
-                            : project._id === 'personal-2'
-                              ? '/logos/TODO-logo.png'
-                              : '/logos/WEATHER-logo.png'
-                        )}
+                        src={getAssetPath(screenshot)}
                         alt={project.title}
                         fill
-                        className="object-contain"
+                        className="object-cover object-top"
                       />
                     </div>
-                  ) : (
+                  )
+                }
+                return !project.image ? (
+                  <div className="h-48 bg-gradient-primary flex items-center justify-center">
                     <div className="text-white text-6xl font-bold opacity-20">
                       {project.title.charAt(0)}
                     </div>
-                  )}
-                </div>
-              )}
+                  </div>
+                ) : null
+              })()}
 
               <div className="p-4 sm:p-6 flex-1 flex flex-col">
                 <h3 className="text-xl sm:text-2xl font-bold mb-3 dark:text-gray-100">{project.title}</h3>
@@ -266,6 +279,15 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                     className="absolute inset-0 w-full h-full"
                   />
                 </div>
+              ) : project._id === '2' ? (
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={getAssetPath('/images/wep-screenshot.png')}
+                    alt={project.title}
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
               ) : project.image ? (
                 <div className="relative h-48 bg-gradient-primary">
                   <Image
@@ -277,20 +299,9 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                 </div>
               ) : (
                 <div className="h-48 bg-gradient-primary flex items-center justify-center">
-                  {project._id === '2' ? (
-                    <div className="relative w-32 h-32">
-                      <Image
-                        src={getAssetPath('/logos/wep-logo.png')}
-                        alt={project.title}
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                  ) : (
-                    <div className="text-white text-6xl font-bold opacity-20">
-                      {project.title.charAt(0)}
-                    </div>
-                  )}
+                  <div className="text-white text-6xl font-bold opacity-20">
+                    {project.title.charAt(0)}
+                  </div>
                 </div>
               )}
 

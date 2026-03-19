@@ -90,3 +90,16 @@ export const blogBySlugQuery = groq`
   }
 `
 
+export const chatDataSourcesQuery = groq`
+  *[_type == "chatDataSource" && enabled == true] | order(priority desc) {
+    _id,
+    name,
+    sourceType,
+    url,
+    "fileUrl": file.asset->url,
+    textContent,
+    description,
+    priority
+  }
+`
+

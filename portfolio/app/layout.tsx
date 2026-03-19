@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import ChatWidget from "@/components/ChatWidget";
 
 export const metadata: Metadata = {
   title: "Sabyasachi Upadhyay | Product Leader & AI for Good Advocate",
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body className="antialiased">
         <ThemeProvider>
           {children}
+          <ChatWidget />
         </ThemeProvider>
       </body>
     </html>

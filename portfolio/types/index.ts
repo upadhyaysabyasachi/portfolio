@@ -52,3 +52,14 @@ export interface Experience {
   current?: boolean
 }
 
+export interface ChatDataSource {
+  _id: string
+  name: string
+  sourceType: 'url' | 'pdf' | 'text' | 'file'
+  url?: string
+  fileUrl?: string
+  textContent?: string
+  description?: string
+  priority: number
+}
+
