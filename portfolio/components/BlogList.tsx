@@ -129,7 +129,7 @@ const BlogList = ({ blogs = [] }: BlogListProps) => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white dark:bg-gray-800 rounded-2xl p-6 sm:p-8 shadow-lg card-hover border border-gray-100 dark:border-gray-700 group"
+              className="bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg card-hover border border-gray-100 dark:border-gray-700 group"
             >
               <div className="flex flex-col md:flex-row md:items-start gap-6">
                 <div className="flex-1">

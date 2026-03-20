@@ -54,7 +54,7 @@ const CertificationsAwards = () => {
                 <p className="text-sm font-semibold text-gray-200 text-center py-2 px-3 border-b border-gray-700">
                   GenAI Certification
                 </p>
-                <div className="relative w-full aspect-[3/4] min-h-[280px] max-h-[420px] bg-gray-700">
+                <div className="relative w-full aspect-[3/4] min-h-[200px] sm:min-h-[280px] max-h-[320px] sm:max-h-[420px] bg-gray-700">
                   <iframe
                     src={`${getAssetPath('/Sabyasachi_Certificate_100x.pdf')}#view=FitH`}
                     title="GenAI 100x Certificate"
@@ -81,7 +81,7 @@ const CertificationsAwards = () => {
             className="bg-gray-800 dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-700 overflow-hidden card-hover"
           >
             <div className="p-6 sm:p-8">
-              <div className="flex flex-col lg:flex-row gap-8">
+              <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8">
                 <div className="lg:w-2/5 shrink-0">
                   <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-700">
                     <Image

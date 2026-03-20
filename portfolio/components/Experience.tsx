@@ -118,7 +118,7 @@ const Experience = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white dark:bg-gray-800 rounded-2xl p-6 sm:p-8 shadow-lg card-hover border border-gray-100 dark:border-gray-700"
+              className="bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg card-hover border border-gray-100 dark:border-gray-700"
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div className="flex-1">
@@ -133,7 +133,7 @@ const Experience = () => {
                   </div>
                   <p className="text-lg sm:text-xl text-primary-600 font-semibold mb-2">{exp.company}</p>
                   <p className="text-gray-600 dark:text-gray-200 italic mb-3">{exp.description}</p>
-                  <div className="flex flex-wrap gap-4 text-sm text-gray-500 dark:text-gray-300">
+                  <div className="flex flex-wrap gap-2 sm:gap-4 text-sm text-gray-500 dark:text-gray-300">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
                       <span>{exp.duration}</span>

@@ -7,11 +7,11 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8">
           {/* About */}
           <div>
-            <h3 className="text-2xl font-bold font-display mb-4">
+            <h3 className="text-xl sm:text-2xl font-bold font-display mb-4">
               <span className="text-gradient bg-gradient-to-r from-primary-400 to-purple-400 bg-clip-text text-transparent">
                 Sabyasachi Upadhyay
               </span>

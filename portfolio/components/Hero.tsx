@@ -41,7 +41,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-20 left-4 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-primary-300 rounded-full mix-blend-multiply filter blur-xl opacity-20"
+          className="absolute top-20 left-4 sm:left-10 w-32 h-32 sm:w-48 sm:h-48 md:w-72 md:h-72 bg-primary-300 rounded-full mix-blend-multiply filter blur-xl opacity-20"
           animate={{
             x: [0, 100, 0],
             y: [0, 50, 0],
@@ -53,7 +53,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
           }}
         />
         <motion.div
-          className="absolute top-40 right-4 sm:right-10 w-48 h-48 sm:w-72 sm:h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20"
+          className="absolute top-40 right-4 sm:right-10 w-32 h-32 sm:w-48 sm:h-48 md:w-72 md:h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20"
           animate={{
             x: [0, -100, 0],
             y: [0, 100, 0],
@@ -65,7 +65,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
           }}
         />
         <motion.div
-          className="absolute -bottom-8 left-1/2 w-48 h-48 sm:w-72 sm:h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20"
+          className="absolute -bottom-8 left-1/2 w-32 h-32 sm:w-48 sm:h-48 md:w-72 md:h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20"
           animate={{
             x: [0, 50, 0],
             y: [0, -50, 0],
@@ -140,7 +140,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-display mb-6 break-words">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold font-display mb-6 break-words">
                   Hi, I'm{' '}
                   <span className="text-gradient">
                     Sabyasachi Upadhyay
@@ -154,7 +154,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="mb-8"
               >
-                <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-700 dark:text-gray-300 h-12 sm:h-16 flex items-center justify-center lg:justify-start">
+                <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-700 dark:text-gray-300 h-10 sm:h-12 md:h-16 flex items-center justify-center lg:justify-start">
                   <motion.span
                     key={currentHeadline}
                     initial={{ opacity: 0, y: 20 }}

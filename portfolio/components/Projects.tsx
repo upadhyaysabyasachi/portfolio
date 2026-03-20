@@ -108,7 +108,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto mb-16 sm:mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto mb-16 sm:mb-24">
           {personalProjects.map((project, index) => (
             <motion.div
               key={project._id}
@@ -250,7 +250,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
           {displayProjects.map((project, index) => (
             <motion.div
               key={project._id}
