@@ -101,7 +101,7 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
         </motion.div>
 
         <div className="max-w-5xl mx-auto space-y-6">
-          {displayBlogs.slice(0, 4).map((blog, index) => (
+          {displayBlogs.map((blog, index) => (
             <motion.article
               key={blog._id}
               initial={{ opacity: 0, y: 30 }}
@@ -170,20 +170,6 @@ const Ideas = ({ blogs = [] }: IdeasProps) => {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="text-center mt-12"
-        >
-          <a
-            href="/blog"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
-          >
-            View All Publications
-            <ArrowRight className="w-4 h-4" />
-          </a>
-        </motion.div>
       </div>
     </section>
   )

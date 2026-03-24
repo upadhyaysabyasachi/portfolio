@@ -103,15 +103,6 @@ const CertificationsAwards = () => {
                   <p className="text-gray-400 dark:text-gray-200 mb-4">
                     Recognized as a winner of the Ola Productivity Hackathon for building impactful solutions.
                   </p>
-                  <a
-                    href={getAssetPath('/Ola_Hackathon.pdf')}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-primary-900/50 text-primary-300 rounded-lg font-medium hover:bg-primary-800/50 transition-colors"
-                  >
-                    <FileText className="w-4 h-4" />
-                    View Award (PDF)
-                  </a>
                 </div>
               </div>
             </div>
