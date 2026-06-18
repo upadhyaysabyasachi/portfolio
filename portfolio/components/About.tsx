@@ -52,9 +52,10 @@ const About = () => {
           >
             <div className="prose prose-lg max-w-none text-gray-600 dark:text-gray-200">
               <p className="text-base sm:text-lg md:text-xl leading-relaxed mb-4 sm:mb-6">
-                I'm a <strong>Product Leader</strong> and <strong>Growth Strategist</strong> with a passion for leveraging{' '}
-                <strong>AI for social good</strong>. My journey spans from building fraud detection systems at Ola to shaping
-                national-level platforms at NITI Aayog, and now leading GenAI initiatives at Ola Foundation.
+                I'm a <strong>Product Leader</strong> and <strong>GenAI Builder</strong> with a passion for leveraging{' '}
+                <strong>AI for social good</strong>. My journey spans building fraud detection systems at Ola, shaping
+                national-scale platforms at NITI Aayog, leading a GenAI clinical assistant deployed across Tamil Nadu at the
+                Ola Foundation, and now solo-building Sambodh IAS, an AI-powered exam-prep platform.
               </p>
               <p className="text-base sm:text-lg md:text-xl leading-relaxed mb-4 sm:mb-6">
                 What drives me is the intersection of <strong>technology, impact, and scale</strong>. Whether it's empowering

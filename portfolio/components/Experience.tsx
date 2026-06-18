@@ -11,47 +11,60 @@ const Experience = () => {
 
   const experiences = [
     {
-      company: 'Ola Foundation',
-      role: 'Product Owner',
-      duration: 'January 2025 - Present',
+      company: 'Sambodh IAS',
+      role: 'Founder & Builder',
+      duration: 'February 2026 - Present',
       location: 'Bengaluru, India',
       current: true,
-      description: 'Building GenAI-powered healthcare platform for India',
+      description: 'Solo-building an AI-powered exam-prep platform for UPSC',
       highlights: [
-        'Led rollout of GenAI Assistant for Frontline Health Workers monitoring anemia in 6 blocks, Krishnagiri, Tamil Nadu',
-        'Building platform leveraging LLMs and SLMs for responsive public healthcare',
-        'Created roadmap for comprehensive women\'s platform across health, livelihoods, and education',
+        'Solo-building an AI-powered assessment platform for UPSC and other competitive exams — instant, structured feedback on written answers plus personalized gap analysis with targeted recommendations',
+        'Grounded LLM responses in a domain knowledge graph of the syllabus and primary source material via a GraphRAG retrieval layer that anchors answers to verified sources',
+        'Architected the full stack end-to-end, including a 7-agent content and engagement pipeline (Fetcher, Relevance, Mapper, Content, Creative, Engagement, Publisher) on FastAPI, Next.js, and Supabase',
       ],
-      tags: ['GenAI', 'LLMs', 'Healthcare', 'Product Strategy'],
+      tags: ['GenAI', 'GraphRAG', 'Knowledge Graphs', 'Agent Systems', 'FastAPI', 'Next.js'],
+    },
+    {
+      company: 'Ola Foundation',
+      role: 'Technical Product Architect / Owner',
+      duration: 'January 2025 - May 2026',
+      location: 'Bengaluru, India',
+      description: 'National-scale, regulatory-sensitive GenAI in public health',
+      highlights: [
+        'Led SAHELI Actiquity AI, a GenAI clinical assistant rolled out across 6 blocks of Krishnagiri, Tamil Nadu — driving a 57% reduction in unnecessary clinical referrals and 80% CSAT among frontline workers',
+        'Owned the full AI stack end-to-end: Retrieval Augmented Generation architecture, prompt design, evaluation harness, clinical-protocol guardrails, and human-in-the-loop workflows',
+        'Rebuilt the eval harness in a two-week sprint after the pilot surfaced edge-case hallucinations, cutting the hallucination rate by 30%',
+        'Defined the product and program roadmap across health, livelihood, and education for a women-centric digital platform reaching underserved communities',
+      ],
+      tags: ['GenAI', 'RAG', 'Eval Harness', 'Guardrails', 'Healthcare', 'Product Strategy'],
     },
     {
       company: 'NITI Aayog',
-      role: 'Associate',
+      role: 'Associate / Research Officer',
       duration: 'May 2020 - December 2024',
       location: 'New Delhi, India',
-      description: 'Product Development & Fintech Strategy',
+      description: 'National platforms, regulatory authorship & frontier-tech policy',
       highlights: [
-        'Led Women Entrepreneurship Platform (WEP) - 30,000+ entrepreneurs, 400+ mentors, 26+ partner organizations',
-        'Founding team member of National Data Analytics Platform (NDAP) - 3000+ datasets, 25+ ministries',
-        'Managed health pilot projects for Clinical Decision Support Systems in Aspirational Districts',
-        'Co-authored Digital Banking Licensing & Regulatory Framework for India',
-        'Supported CEO Office on Web3 Research (Blockchain & Crypto)',
+        'Co-authored "Digital Banks: A Proposal for Licensing & Regulatory Regime for India", a foundational framework engaged with the RBI and the Department of Financial Services',
+        'Led product development for the National Data Analytics Platform (NDAP) — 3,000+ datasets across 25+ ministries, with cross-ministry alignment driven at Joint Secretary and Secretary level',
+        'Scaled the Women Entrepreneurship Platform (WEP) to 30,000+ users, 400+ mentors, and 26+ institutional partners; co-authored "Moving the Needle"',
+        'Managed an AI-based Clinical Decision Support System pilot across Aspirational Districts in partnership with Elsevier (RELX) and multiple state health systems',
+        'Supported the CEO Office and Frontier Technologies vertical on Web3, blockchain, and digital-asset policy research',
       ],
-      tags: ['Product Management', 'Fintech', 'Policy', 'Platform Building'],
+      tags: ['Product Management', 'Platform Building', 'Regulatory Policy', 'Stakeholder Management'],
     },
     {
-      company: 'UPSC Preparation & Mentorship',
-      role: 'Civil Services Examination',
+      company: 'UPSC Civil Services & Mentorship',
+      role: 'Study Sabbatical — Civil Services Examination',
       duration: 'June 2017 - April 2020',
       location: 'India',
-      description: 'Intensive Study & Knowledge Development',
+      description: 'Intensive study, top 2% nationally, and mentorship',
       highlights: [
-        'Qualified Prelims twice (2019, 2022), appeared for Mains',
-        'Top 2% among 1M+ candidates (0.1% acceptance rate)',
-        'Developed expertise in Governance, Policy, Economics, Technology, and Social Sector',
-        'Mentored UPSC candidates on Topmate with positive testimonials',
+        'Cleared the UPSC CSE Prelims twice and appeared for Mains; ranked in the top 2% among 1M+ applicants',
+        'Built exam-grade fluency in the Indian Constitution, federal architecture, central and state governance, economic policy, and public administration',
+        'Mentored aspirants on Topmate, developing structured analytical and policy-evaluation skills',
       ],
-      tags: ['Policy', 'Governance', 'Research', 'Teaching'],
+      tags: ['Governance', 'Policy', 'Economics', 'Mentorship'],
     },
     {
       company: 'Ola',
@@ -60,9 +73,9 @@ const Experience = () => {
       location: 'Bengaluru, India',
       description: 'Big Data & Machine Learning',
       highlights: [
-        'Built Fraud Detection Engine using Spectral Clustering and Clique Detection on graphs',
-        'Deployed production system with 80% accuracy for real-time fraud detection',
-        'Worked with Apache Spark GraphX and R Igraph for large-scale data analysis',
+        'Independently designed and shipped a Fraud Detection Engine for Ola Rides using graph algorithms (Spectral Clustering and Clique Detection) on Apache Spark',
+        'Deployed to production with 80% field-validated accuracy for real-time fraud detection',
+        'Foundational training in data-driven decision systems that now anchors my evidence-based product and policy work',
       ],
       tags: ['Machine Learning', 'Big Data', 'Graph Algorithms', 'Apache Spark'],
     },
@@ -107,7 +120,7 @@ const Experience = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-6"></div>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-200 max-w-3xl mx-auto px-4 sm:px-0">
-            From building ML systems to shaping national platforms, my journey has been about creating impact at scale
+            From shipping ML systems to architecting India&apos;s national platforms to building GenAI products end-to-end, my journey has been about creating measurable impact at scale
           </p>
         </motion.div>
 
