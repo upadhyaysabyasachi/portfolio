@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import Image from 'next/image'
-import { Award, ExternalLink, Trophy } from 'lucide-react'
+import { Award, ExternalLink, FileText, Trophy } from 'lucide-react'
 import { getAssetPath } from '@/lib/utils'
 
 const CertificationsAwards = () => {
@@ -58,11 +58,28 @@ const CertificationsAwards = () => {
                       sizes="(max-width: 1024px) 100vw, 40vw"
                     />
                   </div>
+                  <a
+                    href={getAssetPath('/Bessemer_Second_Runners_Up_Certificate.pdf')}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block mt-3 rounded-xl overflow-hidden border border-gray-600 bg-white transition-transform hover:scale-[1.02]"
+                    aria-label="Open the Second Runners Up certificate (PDF)"
+                  >
+                    <div className="relative aspect-[16/9]">
+                      <Image
+                        src={getAssetPath('/images/hackathon/bessemer-certificate.jpg')}
+                        alt="Second Runners Up certificate of achievement, Bessemer Tech Catalyst, awarded to Sabyasachi Upadhyay"
+                        fill
+                        className="object-contain"
+                        sizes="(max-width: 1024px) 100vw, 40vw"
+                      />
+                    </div>
+                  </a>
                 </div>
                 <div className="flex-1 min-w-0">
                   <span className="inline-flex items-center gap-2 px-3 py-1 mb-4 text-xs font-semibold bg-gradient-primary text-white rounded-full">
                     <Trophy className="w-3.5 h-3.5" />
-                    Latest · September 2026
+                    Latest · 5 September 2026
                   </span>
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-100 mb-2">
                     2nd Runners-up — Bessemer Tech Catalyst Hackathon
@@ -102,15 +119,26 @@ const CertificationsAwards = () => {
                       </div>
                     ))}
                   </div>
-                  <a
-                    href="https://www.linkedin.com/posts/sabyasachi-upadhyay-293b0134_hackathons-hackculture-bessemer-activity-7503556041725431809-a-Zh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 font-semibold transition-colors"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    Read the LinkedIn post
-                  </a>
+                  <div className="flex flex-wrap gap-x-6 gap-y-3">
+                    <a
+                      href={getAssetPath('/Bessemer_Second_Runners_Up_Certificate.pdf')}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 font-semibold transition-colors"
+                    >
+                      <FileText className="w-4 h-4" />
+                      View certificate
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/posts/sabyasachi-upadhyay-293b0134_hackathons-hackculture-bessemer-activity-7503556041725431809-a-Zh"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 font-semibold transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Read the LinkedIn post
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
