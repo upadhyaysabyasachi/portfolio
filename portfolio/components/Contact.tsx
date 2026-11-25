@@ -58,7 +58,7 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-16 sm:py-24 bg-white dark:bg-gray-950" ref={ref}>
+    <section id="contact" className="py-16 sm:py-24 bg-white dark:bg-gray-950 overflow-x-clip" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6">
         {/* Video Showcase Section */}
         <motion.div
