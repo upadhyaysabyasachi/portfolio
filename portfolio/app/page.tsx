@@ -2,6 +2,7 @@ import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Experience from '@/components/Experience'
+import Skills from '@/components/Skills'
 import CertificationsAwards from '@/components/CertificationsAwards'
 import Projects from '@/components/Projects'
 import Ideas from '@/components/Ideas'
@@ -14,10 +15,11 @@ export default function Home() {
       <Navigation />
       <Hero
         imageSrc="/images/hero-image.jpg"
-        imageAlt="Sabyasachi Upadhyay - Hackathon Winner"
+        imageAlt="Sabyasachi Upadhyay"
       />
       <About />
       <Experience />
+      <Skills />
       <Projects />
       <CertificationsAwards />
       <Ideas />

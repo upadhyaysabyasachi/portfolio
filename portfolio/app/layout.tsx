@@ -3,20 +3,20 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "Sabyasachi Upadhyay | Product Leader & AI for Good Advocate",
-  description: "Product Leader, Growth Strategist, and AI for Good advocate. Building innovative products that drive growth and create meaningful impact through technology.",
-  keywords: ["Product Management", "AI for Good", "Growth Strategy", "GenAI", "Social Impact", "Technology", "NITI Aayog", "Ola Foundation"],
+  title: "Sabyasachi Upadhyay | Lead AI Product Manager",
+  description: "Lead AI Product Manager with a decade of shipping GenAI and agentic products end-to-end, from prototype to production: RAG, evals, guardrails, and human-in-the-loop workflows.",
+  keywords: ["AI Product Management", "GenAI", "Agentic AI", "RAG", "LLM Evals", "Guardrails", "Cognizant", "NITI Aayog", "Ola Foundation", "Sambodh IAS"],
   authors: [{ name: "Sabyasachi Upadhyay" }],
   openGraph: {
-    title: "Sabyasachi Upadhyay | Product Leader & AI for Good Advocate",
-    description: "Building innovative products that drive growth and create meaningful impact through technology.",
+    title: "Sabyasachi Upadhyay | Lead AI Product Manager",
+    description: "A decade of shipping GenAI and agentic products end-to-end, from prototype to production.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sabyasachi Upadhyay | Product Leader & AI for Good Advocate",
-    description: "Building innovative products that drive growth and create meaningful impact through technology.",
+    title: "Sabyasachi Upadhyay | Lead AI Product Manager",
+    description: "A decade of shipping GenAI and agentic products end-to-end, from prototype to production.",
   },
 };
 

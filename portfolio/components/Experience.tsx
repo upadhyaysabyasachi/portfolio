@@ -11,14 +11,25 @@ const Experience = () => {
 
   const experiences = [
     {
-      company: 'Sambodh IAS',
-      role: 'Founder & Builder',
-      duration: 'February 2026 - Present',
+      company: 'Cognizant',
+      role: 'Manager - Projects',
+      duration: 'August 2026 - Present',
       location: 'Bengaluru, India',
       current: true,
-      description: 'Solo-building an AI-powered exam-prep platform for UPSC',
+      description: 'Agentic AI for banking and financial services',
       highlights: [
-        'Solo-building an AI-powered assessment platform for UPSC and other competitive exams — instant, structured feedback on written answers plus personalized gap analysis with targeted recommendations',
+        'Working on Agentic AI solutions for BFSI workflows',
+      ],
+      tags: ['Agentic AI', 'GenAI', 'BFSI', 'Enterprise Delivery'],
+    },
+    {
+      company: 'Sambodh IAS',
+      role: 'Founder & Builder',
+      duration: 'February 2026 - July 2026',
+      location: 'Bengaluru, India',
+      description: 'Solo-built an AI-powered assessment platform for UPSC',
+      highlights: [
+        'Solo-built an AI-powered assessment platform for UPSC and other competitive exams — instant, structured feedback on written answers plus personalized gap analysis with targeted recommendations',
         'Grounded LLM responses in a domain knowledge graph of the syllabus and primary source material via a GraphRAG retrieval layer that anchors answers to verified sources',
         'Architected the full stack end-to-end, including a 7-agent content and engagement pipeline (Fetcher, Relevance, Mapper, Content, Creative, Engagement, Publisher) on FastAPI, Next.js, and Supabase',
       ],
@@ -48,10 +59,11 @@ const Experience = () => {
         'Co-authored "Digital Banks: A Proposal for Licensing & Regulatory Regime for India", a foundational framework engaged with the RBI and the Department of Financial Services',
         'Led product development for the National Data Analytics Platform (NDAP) — 3,000+ datasets across 25+ ministries, with cross-ministry alignment driven at Joint Secretary and Secretary level',
         'Scaled the Women Entrepreneurship Platform (WEP) to 30,000+ users, 400+ mentors, and 26+ institutional partners; co-authored "Moving the Needle"',
-        'Managed an AI-based Clinical Decision Support System pilot across Aspirational Districts in partnership with Elsevier (RELX) and multiple state health systems',
+        'Shipped an in-platform GenAI chatbot on WEP that answers entrepreneurs\' questions on schemes, eligibility, and partner matching in natural language, replacing static FAQs',
+        'Managed an AI-based Clinical Decision Support System pilot across Aspirational Districts in partnership with the UK FCDO, Elsevier (RELX), and Piramal Foundation',
         'Supported the CEO Office and Frontier Technologies vertical on Web3, blockchain, and digital-asset policy research',
       ],
-      tags: ['Product Management', 'Platform Building', 'Regulatory Policy', 'Stakeholder Management'],
+      tags: ['Product Management', 'Platform Building', 'GenAI Chatbot', 'Regulatory Policy', 'Stakeholder Management'],
     },
     {
       company: 'UPSC Civil Services & Mentorship',
@@ -120,7 +132,7 @@ const Experience = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-6"></div>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-200 max-w-3xl mx-auto px-4 sm:px-0">
-            From shipping ML systems to architecting India&apos;s national platforms to building GenAI products end-to-end, my journey has been about creating measurable impact at scale
+            From shipping ML systems, to leading India&apos;s national data and AI platforms, to taking GenAI and agentic products from prototype to production
           </p>
         </motion.div>
 

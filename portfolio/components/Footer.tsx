@@ -17,8 +17,8 @@ const Footer = () => {
               </span>
             </h3>
             <p className="text-gray-400 dark:text-gray-200 leading-relaxed">
-              Product Leader, Growth Strategist, and AI for Good advocate. Building products that create meaningful
-              impact at scale.
+              Lead AI Product Manager. Shipping GenAI and agentic products end-to-end, from prototype to
+              production.
             </p>
           </div>
 

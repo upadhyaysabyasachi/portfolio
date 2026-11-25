@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowDown } from 'lucide-react'
+import { ArrowDown, Trophy } from 'lucide-react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { SiSubstack } from 'react-icons/si'
 import Image from 'next/image'
@@ -19,10 +19,10 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
   const [currentHeadline, setCurrentHeadline] = useState(0)
   
   const headlines = rotatingHeadlines || [
-    'Product Leader',
-    '0-1 Builder',
-    'GenAI Innovator',
-    'AI for Good Advocate',
+    'Lead AI Product Manager',
+    'GenAI & Agents Builder',
+    'RAG · Evals · Guardrails',
+    'Prototype to Production',
   ]
 
   useEffect(() => {
@@ -140,6 +140,13 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
+                <a
+                  href="#certifications"
+                  className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white/90 dark:bg-gray-800/90 border border-primary-200 dark:border-primary-700 text-gray-700 dark:text-gray-200 shadow-md transition-transform hover:scale-[1.03]"
+                >
+                  <Trophy className="w-4 h-4 text-amber-500 shrink-0" />
+                  <span>Latest: 2nd Runners-up, Bessemer Tech Catalyst Hackathon</span>
+                </a>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold font-display mb-6 break-words">
                   Hi, I'm{' '}
                   <span className="text-gradient">
@@ -175,7 +182,7 @@ const Hero = ({ rotatingHeadlines, bio, imageSrc, imageAlt = 'Hero image' }: Her
                 className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-200 mb-8 sm:mb-12 max-w-3xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0"
               >
                 {bio ||
-                  "Building innovative products that drive growth and create meaningful impact. Passionate about leveraging AI and technology to solve real-world problems and empower communities."}
+                  "A decade of shipping AI products end-to-end, from prototype to production, with measurable outcomes. I own the full AI stack: model choice, prompt design, eval harnesses, retrieval grounding, guardrails, and human-in-the-loop workflows."}
               </motion.p>
 
               <motion.div
